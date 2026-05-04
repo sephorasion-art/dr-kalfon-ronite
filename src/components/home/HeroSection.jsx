@@ -50,13 +50,14 @@ export default function HeroSection() {
             </div>
 
             {/* Luxomed logo */}
-            <div className="flex items-center gap-3 mt-10">
+            <div className="flex flex-col items-start gap-1 mt-10">
               <span className="text-xs text-muted-foreground uppercase tracking-widest">Praticienne certifiée</span>
               <img
-                src="https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/e02a88b0e_Logo-Luxomed-byHolicare-cmjn.svg"
+                src="https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/8d92117a9_Logo-Luxomed-byHolicare-cmjn.svg"
                 alt="Logo Luxomed by Holicare"
-                className="h-8 object-contain"
+                className="h-10 object-contain"
               />
+              <span className="text-xs font-semibold text-primary uppercase tracking-widest">Centre Agréé Luxomed</span>
             </div>
 
             {/* Credentials */}
