@@ -48,7 +48,7 @@ export default function Contact() {
     await base44.entities.Appointment.create(form);
     setSubmitting(false);
     setSubmitted(true);
-    toast.success("Votre demande a été envoyée avec succès !");
+    toast.success(t.contact.success);
   };
 
   return (
