@@ -24,9 +24,9 @@ export default function HeroSection() {
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight text-foreground mb-6">
-              Nutrition & Bien-être
+              Retrouvez Équilibre
               <br />
-              <span className="text-primary">par la Luxopuncture®</span>
+              <span className="text-primary">& Bien-être au Naturel</span>
             </h1>
 
             <p className="text-lg text-muted-foreground max-w-lg mb-10 leading-relaxed">
