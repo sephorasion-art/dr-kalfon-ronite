@@ -21,11 +21,11 @@ export default function ClinicSection() {
                 className="w-full h-[400px] object-cover"
               />
             </div>
-            <div className="absolute -bottom-6 -right-6 w-48 h-48 rounded-2xl overflow-hidden shadow-lg border-4 border-background hidden md:block">
+            <div className="absolute -bottom-6 -right-6 w-48 h-24 rounded-2xl bg-white shadow-lg border border-border/30 flex items-center justify-center p-4 hidden md:flex">
               <img
-                src="https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/71d0c3c8c_generated_5b4d0f78.png"
-                alt="Technique de luxopuncture - lumière infrarouge"
-                className="w-full h-full object-cover"
+                src="https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/8d92117a9_Logo-Luxomed-byHolicare-cmjn.svg"
+                alt="Logo Luxomed by Holicare"
+                className="w-full h-full object-contain"
               />
             </div>
           </motion.div>
