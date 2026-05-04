@@ -87,9 +87,9 @@ export default function HeroSection() {
           >
             <div className="relative rounded-3xl overflow-hidden shadow-2xl">
               <img
-                src="https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/95c2e45d4_generated_47a784df.png"
+                src="https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/b20127226_WhatsApp-Image-2025-03-21-at-164200.jpg"
                 alt="Dr. Ronit Kalfon dans sa clinique à Tel Aviv"
-                className="w-full h-[600px] object-cover"
+                className="w-full h-[600px] object-cover object-top"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-foreground/20 to-transparent" />
             </div>
