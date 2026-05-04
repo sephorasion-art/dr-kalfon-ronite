@@ -2,9 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { ArrowRight, MessageCircle } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import { useLang } from "@/lib/LanguageContext";
 
 export default function CTASection() {
+  const { t } = useLang();
   return (
     <section className="py-32 relative overflow-hidden">
       <div className="absolute inset-0">
@@ -24,19 +26,18 @@ export default function CTASection() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6 leading-tight">
-            Commencez Votre Transformation
+            {t.cta.title1}
             <br />
-            <span className="text-primary">Dès Aujourd'hui</span>
+            <span className="text-primary">{t.cta.title2}</span>
           </h2>
           <p className="text-lg text-muted-foreground mb-10 max-w-2xl mx-auto">
-            Prenez rendez-vous pour une première consultation et découvrez comment 
-            l'alliance de la science et de l'innovation peut transformer votre bien-être.
+            {t.cta.subtitle}
           </p>
 
           <div className="flex flex-wrap justify-center gap-4">
             <Link to="/contact">
               <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-10 gap-2 text-base h-14">
-                Prendre Rendez-vous
+                {t.cta.btn}
                 <ArrowRight className="w-4 h-4" />
               </Button>
             </Link>

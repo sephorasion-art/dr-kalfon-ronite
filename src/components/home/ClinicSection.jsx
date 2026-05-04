@@ -1,8 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { MapPin, Shield, Leaf } from "lucide-react";
+import { useLang } from "@/lib/LanguageContext";
 
 export default function ClinicSection() {
+  const { t } = useLang();
   return (
     <section className="py-32 bg-secondary/30">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -38,22 +40,20 @@ export default function ClinicSection() {
           >
             <div className="inline-flex items-center gap-2 text-primary text-sm font-medium uppercase tracking-widest mb-4">
               <div className="precision-dot" />
-              Notre espace
+              {t.clinic.badge}
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-              Un Cabinet Médical au Cœur de Tel Aviv
+              {t.clinic.title}
             </h2>
             <p className="text-muted-foreground mb-8 leading-relaxed">
-              Dans un cadre calme et confidentiel, le Dr. Kalfon reçoit ses patients 
-              sur rendez-vous pour des consultations approfondies. Chaque prise en charge 
-              est individualisée, dans le respect du secret médical et du confort du patient.
+              {t.clinic.desc}
             </p>
 
             <div className="space-y-6">
               {[
-                { icon: Shield, title: "Suivi Médical Individualisé", desc: "Chaque consultation est adaptée à votre profil, vos antécédents et vos objectifs" },
-                { icon: MapPin, title: "Cabinet sur Rendez-vous", desc: "Situé au cœur de Tel Aviv, accessible et confidentiel" },
-                { icon: Leaf, title: "Environnement Apaisant", desc: "Un espace pensé pour la sérénité et la qualité de la prise en charge" },
+                { icon: Shield, title: t.clinic.f1title, desc: t.clinic.f1desc },
+                { icon: MapPin, title: t.clinic.f2title, desc: t.clinic.f2desc },
+                { icon: Leaf, title: t.clinic.f3title, desc: t.clinic.f3desc },
               ].map((item) => (
                 <div key={item.title} className="flex gap-4">
                   <div className="shrink-0 w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">

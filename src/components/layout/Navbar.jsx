@@ -3,19 +3,22 @@ import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Calendar } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-
-const navLinks = [
-  { label: "Accueil", path: "/" },
-  { label: "Services", path: "/services" },
-  { label: "Luxopuncture", path: "/luxopuncture" },
-  { label: "À Propos", path: "/about" },
-  { label: "Contact", path: "/contact" },
-];
+import { useLang } from "@/lib/LanguageContext";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const location = useLocation();
+  const { t } = useLang();
+
+  const navLinks = [
+    { label: t.nav.home, path: "/" },
+    { label: t.nav.services, path: "/services" },
+    { label: t.nav.luxopuncture, path: "/luxopuncture" },
+    { label: t.nav.about, path: "/about" },
+    { label: t.nav.contact, path: "/contact" },
+  ];
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -61,10 +64,11 @@ export default function Navbar() {
                 {link.label}
               </Link>
             ))}
+            <LanguageSwitcher />
             <Link to="/contact">
               <Button className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-6 gap-2">
                 <Calendar className="w-4 h-4" />
-                Prendre RDV
+                {t.nav.rdv}
               </Button>
             </Link>
           </div>
@@ -100,10 +104,11 @@ export default function Navbar() {
                   {link.label}
                 </Link>
               ))}
+              <div className="pt-1"><LanguageSwitcher /></div>
               <Link to="/contact" className="block pt-2">
                 <Button className="w-full bg-primary text-primary-foreground rounded-full gap-2">
                   <Calendar className="w-4 h-4" />
-                  Prendre RDV
+                  {t.nav.rdv}
                 </Button>
               </Link>
             </div>
