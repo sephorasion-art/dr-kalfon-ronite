@@ -17,7 +17,7 @@ const steps = [
   },
   {
     icon: Sun,
-    title: "Luminothérapie",
+    title: "Luxopuncture®",
     description: "Séances de luxopuncture ciblées pour stimuler les points réflexes et rééquilibrer le système endocrinien.",
     detail: "Infrarouge non invasif sur les méridiens"
   },
