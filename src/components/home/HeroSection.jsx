@@ -24,11 +24,9 @@ export default function HeroSection() {
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight text-foreground mb-6">
-              La Précision de la{" "}
-              <span className="text-primary">Science.</span>
+              Nutrition & Bien-être
               <br />
-              L'Art de{" "}
-              <span className="text-gradient">l'Équilibre.</span>
+              <span className="text-primary">par la Luxopuncture®</span>
             </h1>
 
             <p className="text-lg text-muted-foreground max-w-lg mb-10 leading-relaxed">
@@ -64,8 +62,8 @@ export default function HeroSection() {
               </div>
               <div className="w-px h-10 bg-border" />
               <div>
-                <div className="text-2xl font-bold text-foreground">2000+</div>
-                <div className="text-xs text-muted-foreground uppercase tracking-wider">Patients suivis</div>
+                <div className="text-2xl font-bold text-foreground">Formée</div>
+                <div className="text-xs text-muted-foreground uppercase tracking-wider">En France</div>
               </div>
             </div>
           </motion.div>
