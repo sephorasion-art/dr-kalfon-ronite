@@ -153,11 +153,11 @@ export default function Luxopuncture() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <div className="rounded-3xl overflow-hidden shadow-xl">
+              <div className="rounded-3xl overflow-hidden bg-white shadow-xl flex items-center justify-center p-8">
                 <img
-                  src="/__generating__/img_4b2c19147a39.png"
-                  alt="Technique de luxopuncture par lumière infrarouge"
-                  className="w-full h-[400px] object-cover"
+                  src="https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/b21167ef3_BELUXO-FOND-BLANC-copie.jpg"
+                  alt="Appareil Beluxo de Luxopuncture®"
+                  className="w-full max-h-[380px] object-contain drop-shadow-xl"
                 />
               </div>
             </motion.div>
