@@ -16,7 +16,7 @@ export default function ClinicSection() {
           >
             <div className="rounded-3xl overflow-hidden shadow-xl">
               <img
-                src="https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/9d8558fa6_generated_398aef9c.png"
+                src="https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/a03931d14_generated_image.png"
                 alt="Intérieur de la clinique du Dr. Kalfon à Tel Aviv"
                 className="w-full h-[400px] object-cover"
               />

@@ -40,12 +40,6 @@ export default function CTASection() {
                 <ArrowRight className="w-4 h-4" />
               </Button>
             </Link>
-            <Link to="/contact">
-              <Button size="lg" variant="outline" className="rounded-full px-10 text-base h-14 gap-2">
-                <MessageCircle className="w-4 h-4" />
-                Chat Direct
-              </Button>
-            </Link>
           </div>
         </motion.div>
       </div>
