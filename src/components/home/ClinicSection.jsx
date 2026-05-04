@@ -41,19 +41,19 @@ export default function ClinicSection() {
               Notre espace
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-              Un Sanctuaire Clinique au Cœur de Tel Aviv
+              Un Cabinet de Quartier à Tel Aviv
             </h2>
             <p className="text-muted-foreground mb-8 leading-relaxed">
-              Notre clinique allie technologie de pointe et atmosphère apaisante.
-              Chaque détail est pensé pour votre confort et votre bien-être, dans un 
-              environnement qui favorise la guérison et la transformation.
+              Un petit cabinet chaleureux et accueillant, où chaque patient est reçu 
+              dans un cadre calme et bienveillant. Ici, on prend le temps d'écouter 
+              et d'accompagner, loin de l'agitation du monde médical classique.
             </p>
 
             <div className="space-y-6">
               {[
-                { icon: Shield, title: "Équipement Certifié", desc: "Appareils de luxopuncture de dernière génération, conformes aux normes médicales" },
-                { icon: MapPin, title: "Localisation Premium", desc: "Facilement accessible au cœur de Tel Aviv, parking disponible" },
-                { icon: Leaf, title: "Ambiance Thérapeutique", desc: "Un espace conçu pour la détente, baigné de lumière naturelle" },
+                { icon: Shield, title: "Suivi Personnalisé", desc: "Chaque consultation est unique, adaptée à votre situation et vos besoins" },
+                { icon: MapPin, title: "Facilement Accessible", desc: "Cabinet de quartier au cœur de Tel Aviv, facile d'accès" },
+                { icon: Leaf, title: "Atmosphère Apaisante", desc: "Un espace calme et chaleureux pour se sentir à l'aise dès la première visite" },
               ].map((item) => (
                 <div key={item.title} className="flex gap-4">
                   <div className="shrink-0 w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">

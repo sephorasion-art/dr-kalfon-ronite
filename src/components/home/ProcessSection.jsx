@@ -47,11 +47,10 @@ export default function ProcessSection() {
             Protocole de soin
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            La Prescription Moléculaire
+            Comment se déroule un suivi ?
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Un parcours de soin en quatre étapes, guidé par la précision 
-            pharmaceutique et l'innovation thérapeutique.
+            Un accompagnement personnalisé, étape par étape, pour vous aider à atteindre vos objectifs durablement.
           </p>
         </motion.div>
 
