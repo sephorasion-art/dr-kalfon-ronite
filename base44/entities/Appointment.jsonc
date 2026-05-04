@@ -1,0 +1,57 @@
+{
+  "name": "Appointment",
+  "type": "object",
+  "properties": {
+    "full_name": {
+      "type": "string",
+      "description": "Patient full name"
+    },
+    "email": {
+      "type": "string",
+      "description": "Patient email"
+    },
+    "phone": {
+      "type": "string",
+      "description": "Patient phone number"
+    },
+    "service": {
+      "type": "string",
+      "enum": [
+        "nutrition",
+        "luxopuncture_addiction",
+        "luxopuncture_weight",
+        "luxopuncture_smoking",
+        "luxopuncture_sleep",
+        "luxopuncture_relaxation",
+        "luxopuncture_rejuvenation"
+      ],
+      "description": "Type of service requested"
+    },
+    "preferred_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Preferred appointment date"
+    },
+    "message": {
+      "type": "string",
+      "description": "Additional notes from patient"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "confirmed",
+        "cancelled",
+        "completed"
+      ],
+      "default": "pending",
+      "description": "Appointment status"
+    }
+  },
+  "required": [
+    "full_name",
+    "email",
+    "phone",
+    "service"
+  ]
+}

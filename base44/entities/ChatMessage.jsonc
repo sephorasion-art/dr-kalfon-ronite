@@ -1,0 +1,41 @@
+{
+  "name": "ChatMessage",
+  "type": "object",
+  "properties": {
+    "sender_name": {
+      "type": "string",
+      "description": "Name of the message sender"
+    },
+    "sender_email": {
+      "type": "string",
+      "description": "Email of the sender"
+    },
+    "message": {
+      "type": "string",
+      "description": "The chat message content"
+    },
+    "sender_type": {
+      "type": "string",
+      "enum": [
+        "client",
+        "admin"
+      ],
+      "default": "client",
+      "description": "Whether the message is from a client or admin"
+    },
+    "conversation_id": {
+      "type": "string",
+      "description": "Groups messages into conversations"
+    },
+    "is_read": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether the message has been read"
+    }
+  },
+  "required": [
+    "message",
+    "sender_type",
+    "conversation_id"
+  ]
+}

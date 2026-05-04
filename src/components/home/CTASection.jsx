@@ -1,0 +1,54 @@
+import React from "react";
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
+import { ArrowRight, MessageCircle } from "lucide-react";
+
+export default function CTASection() {
+  return (
+    <section className="py-32 relative overflow-hidden">
+      <div className="absolute inset-0">
+        <img
+          src="https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/543c22812_generated_652e5d3b.png"
+          alt=""
+          className="w-full h-full object-cover opacity-10"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/95 to-background" />
+      </div>
+
+      <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center relative">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6 leading-tight">
+            Commencez Votre Transformation
+            <br />
+            <span className="text-primary">Dès Aujourd'hui</span>
+          </h2>
+          <p className="text-lg text-muted-foreground mb-10 max-w-2xl mx-auto">
+            Prenez rendez-vous pour une première consultation et découvrez comment 
+            l'alliance de la science et de l'innovation peut transformer votre bien-être.
+          </p>
+
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link to="/contact">
+              <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-10 gap-2 text-base h-14">
+                Prendre Rendez-vous
+                <ArrowRight className="w-4 h-4" />
+              </Button>
+            </Link>
+            <Link to="/contact">
+              <Button size="lg" variant="outline" className="rounded-full px-10 text-base h-14 gap-2">
+                <MessageCircle className="w-4 h-4" />
+                Chat Direct
+              </Button>
+            </Link>
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
+}
