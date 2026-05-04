@@ -13,7 +13,7 @@ import {
 } from "@/components/ui/select";
 import { base44 } from "@/api/base44Client";
 import {
-  MapPin, Phone, Mail, Clock, Send, CheckCircle2
+  MapPin, Phone, Mail, Clock, Send, CheckCircle2, Building2, Video
 } from "lucide-react";
 import { toast } from "sonner";
 
@@ -32,6 +32,7 @@ export default function Contact() {
     full_name: "",
     email: "",
     phone: "",
+    consultation_type: "presentiel",
     service: "",
     preferred_date: "",
     message: "",
@@ -91,7 +92,7 @@ export default function Contact() {
                   <Button
                     onClick={() => {
                       setSubmitted(false);
-                      setForm({ full_name: "", email: "", phone: "", service: "", preferred_date: "", message: "" });
+                      setForm({ full_name: "", email: "", phone: "", consultation_type: "presentiel", service: "", preferred_date: "", message: "" });
                     }}
                     variant="outline"
                     className="rounded-full"
@@ -109,6 +110,53 @@ export default function Contact() {
                   <h2 className="text-xl font-semibold text-foreground mb-2">
                     Formulaire de Rendez-vous
                   </h2>
+
+                  {/* Consultation type selector */}
+                  <div className="space-y-2">
+                    <Label>Mode de consultation *</Label>
+                    <div className="grid grid-cols-2 gap-3">
+                      {[
+                        {
+                          value: "presentiel",
+                          label: "En Cabinet",
+                          sub: "Tel Aviv",
+                          icon: Building2,
+                        },
+                        {
+                          value: "visio",
+                          label: "En Visio",
+                          sub: "Zoom / Teams",
+                          icon: Video,
+                        },
+                      ].map((opt) => (
+                        <button
+                          key={opt.value}
+                          type="button"
+                          onClick={() => setForm({ ...form, consultation_type: opt.value })}
+                          className={`flex items-center gap-3 p-4 rounded-xl border-2 transition-all text-left ${
+                            form.consultation_type === opt.value
+                              ? "border-primary bg-primary/5"
+                              : "border-border hover:border-primary/40 bg-card"
+                          }`}
+                        >
+                          <div className={`w-10 h-10 rounded-lg flex items-center justify-center shrink-0 ${
+                            form.consultation_type === opt.value ? "bg-primary/10" : "bg-secondary"
+                          }`}>
+                            <opt.icon className={`w-5 h-5 ${form.consultation_type === opt.value ? "text-primary" : "text-muted-foreground"}`} />
+                          </div>
+                          <div>
+                            <div className={`text-sm font-semibold ${form.consultation_type === opt.value ? "text-primary" : "text-foreground"}`}>
+                              {opt.label}
+                            </div>
+                            <div className="text-xs text-muted-foreground">{opt.sub}</div>
+                          </div>
+                          {form.consultation_type === opt.value && (
+                            <CheckCircle2 className="w-4 h-4 text-primary ml-auto shrink-0" />
+                          )}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
 
                   <div className="grid md:grid-cols-2 gap-4">
                     <div className="space-y-2">

@@ -14,6 +14,15 @@
       "type": "string",
       "description": "Patient phone number"
     },
+    "consultation_type": {
+      "type": "string",
+      "enum": [
+        "presentiel",
+        "visio"
+      ],
+      "default": "presentiel",
+      "description": "Mode de consultation : en cabinet ou en visioconf\u00e9rence"
+    },
     "service": {
       "type": "string",
       "enum": [
@@ -52,6 +61,7 @@
     "full_name",
     "email",
     "phone",
-    "service"
+    "service",
+    "consultation_type"
   ]
 }
