@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import { useLang } from "@/lib/LanguageContext";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -28,6 +29,7 @@ const serviceOptions = [
 ];
 
 export default function Contact() {
+  const { t } = useLang();
   const [form, setForm] = useState({
     full_name: "",
     email: "",
@@ -57,14 +59,13 @@ export default function Contact() {
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
             <div className="inline-flex items-center gap-2 text-primary text-sm font-medium uppercase tracking-widest mb-4">
               <div className="precision-dot" />
-              Contact
+              {t.contact.label}
             </div>
             <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Prenez Rendez-vous
+              {t.contact.title}
             </h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Contactez-nous pour planifier votre première consultation ou pour toute question 
-              sur nos services.
+              {t.contact.pageSubtitle}
             </p>
           </motion.div>
         </div>
@@ -84,10 +85,9 @@ export default function Contact() {
                   <div className="w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-6">
                     <CheckCircle2 className="w-10 h-10 text-primary" />
                   </div>
-                  <h3 className="text-2xl font-bold text-foreground mb-3">Merci !</h3>
+                  <h3 className="text-2xl font-bold text-foreground mb-3">{t.contact.successTitle}</h3>
                   <p className="text-muted-foreground mb-6">
-                    Votre demande de rendez-vous a bien été reçue. 
-                    Nous vous contacterons dans les plus brefs délais.
+                    {t.contact.success}
                   </p>
                   <Button
                     onClick={() => {
@@ -97,7 +97,7 @@ export default function Contact() {
                     variant="outline"
                     className="rounded-full"
                   >
-                    Nouveau rendez-vous
+                    {t.contact.newRdv}
                   </Button>
                 </motion.div>
               ) : (
@@ -108,24 +108,24 @@ export default function Contact() {
                   className="bg-card rounded-2xl border border-border p-8 space-y-6"
                 >
                   <h2 className="text-xl font-semibold text-foreground mb-2">
-                    Formulaire de Rendez-vous
+                    {t.contact.formTitle}
                   </h2>
 
                   {/* Consultation type selector */}
                   <div className="space-y-2">
-                    <Label>Mode de consultation *</Label>
+                    <Label>{t.contact.mode}</Label>
                     <div className="grid grid-cols-2 gap-3">
                       {[
                         {
                           value: "presentiel",
-                          label: "En Cabinet",
-                          sub: "Tel Aviv",
+                          label: t.contact.presentiel,
+                          sub: t.contact.presentielSub,
                           icon: Building2,
                         },
                         {
                           value: "visio",
-                          label: "En Visio",
-                          sub: "Zoom / Teams",
+                          label: t.contact.visio,
+                          sub: t.contact.visioSub,
                           icon: Video,
                         },
                       ].map((opt) => (
@@ -160,29 +160,29 @@ export default function Contact() {
 
                   <div className="grid md:grid-cols-2 gap-4">
                     <div className="space-y-2">
-                      <Label>Nom complet *</Label>
+                      <Label>{t.contact.name} *</Label>
                       <Input
                         required
                         value={form.full_name}
                         onChange={(e) => setForm({ ...form, full_name: e.target.value })}
-                        placeholder="Votre nom"
+                        placeholder={t.contact.namePlaceholder}
                       />
                     </div>
                     <div className="space-y-2">
-                      <Label>Email *</Label>
+                      <Label>{t.contact.email} *</Label>
                       <Input
                         type="email"
                         required
                         value={form.email}
                         onChange={(e) => setForm({ ...form, email: e.target.value })}
-                        placeholder="votre@email.com"
+                        placeholder={t.contact.emailPlaceholder}
                       />
                     </div>
                   </div>
 
                   <div className="grid md:grid-cols-2 gap-4">
                     <div className="space-y-2">
-                      <Label>Téléphone *</Label>
+                      <Label>{t.contact.phone} *</Label>
                       <Input
                         required
                         value={form.phone}
@@ -191,7 +191,7 @@ export default function Contact() {
                       />
                     </div>
                     <div className="space-y-2">
-                      <Label>Date souhaitée</Label>
+                      <Label>{t.contact.date}</Label>
                       <Input
                         type="date"
                         value={form.preferred_date}
@@ -201,14 +201,14 @@ export default function Contact() {
                   </div>
 
                   <div className="space-y-2">
-                    <Label>Service souhaité *</Label>
+                    <Label>{t.contact.service} *</Label>
                     <Select
                       required
                       value={form.service}
                       onValueChange={(val) => setForm({ ...form, service: val })}
                     >
                       <SelectTrigger>
-                        <SelectValue placeholder="Sélectionnez un service" />
+                        <SelectValue placeholder={t.contact.serviceSelect} />
                       </SelectTrigger>
                       <SelectContent>
                         {serviceOptions.map((opt) => (
@@ -221,11 +221,11 @@ export default function Contact() {
                   </div>
 
                   <div className="space-y-2">
-                    <Label>Message</Label>
+                    <Label>{t.contact.message}</Label>
                     <Textarea
                       value={form.message}
                       onChange={(e) => setForm({ ...form, message: e.target.value })}
-                      placeholder="Décrivez brièvement votre besoin..."
+                      placeholder={t.contact.messagePlaceholder}
                       rows={4}
                     />
                   </div>
@@ -236,7 +236,7 @@ export default function Contact() {
                     className="w-full bg-primary hover:bg-primary/90 text-primary-foreground rounded-full h-12 gap-2 text-base"
                   >
                     <Send className="w-4 h-4" />
-                    {submitting ? "Envoi en cours..." : "Envoyer la Demande"}
+                    {submitting ? t.contact.sending : t.contact.send}
                   </Button>
                 </motion.form>
               )}
@@ -250,15 +250,15 @@ export default function Contact() {
                 transition={{ delay: 0.2 }}
                 className="bg-card rounded-2xl border border-border p-8"
               >
-                <h3 className="font-semibold text-foreground mb-6">Informations</h3>
+                <h3 className="font-semibold text-foreground mb-6">{t.contact.infoTitle}</h3>
                 <div className="space-y-6">
                   <div className="flex gap-4">
                     <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
                       <MapPin className="w-5 h-5 text-primary" />
                     </div>
                     <div>
-                      <h4 className="font-medium text-foreground text-sm">Adresse</h4>
-                      <p className="text-sm text-muted-foreground">Tel Aviv, Israël</p>
+                      <h4 className="font-medium text-foreground text-sm">{t.contact.address}</h4>
+                      <p className="text-sm text-muted-foreground">{t.contact.addressVal}</p>
                     </div>
                   </div>
                   <div className="flex gap-4">
@@ -266,7 +266,7 @@ export default function Contact() {
                       <Phone className="w-5 h-5 text-primary" />
                     </div>
                     <div>
-                      <h4 className="font-medium text-foreground text-sm">Téléphone</h4>
+                      <h4 className="font-medium text-foreground text-sm">{t.contact.phone}</h4>
                       <p className="text-sm text-muted-foreground">+972 XX XXX XXXX</p>
                     </div>
                   </div>
@@ -275,7 +275,7 @@ export default function Contact() {
                       <Mail className="w-5 h-5 text-primary" />
                     </div>
                     <div>
-                      <h4 className="font-medium text-foreground text-sm">Email</h4>
+                      <h4 className="font-medium text-foreground text-sm">{t.contact.email}</h4>
                       <p className="text-sm text-muted-foreground">contact@drkalfon.com</p>
                     </div>
                   </div>
@@ -284,9 +284,9 @@ export default function Contact() {
                       <Clock className="w-5 h-5 text-primary" />
                     </div>
                     <div>
-                      <h4 className="font-medium text-foreground text-sm">Horaires</h4>
-                      <p className="text-sm text-muted-foreground">Dimanche – Jeudi</p>
-                      <p className="text-sm text-muted-foreground">9h00 – 18h00</p>
+                      <h4 className="font-medium text-foreground text-sm">{t.contact.hours}</h4>
+                      <p className="text-sm text-muted-foreground">{t.contact.hoursVal1}</p>
+                      <p className="text-sm text-muted-foreground">{t.contact.hoursVal2}</p>
                     </div>
                   </div>
                 </div>
@@ -298,14 +298,13 @@ export default function Contact() {
                 transition={{ delay: 0.3 }}
                 className="bg-primary/5 rounded-2xl p-8 border border-primary/10"
               >
-                <h3 className="font-semibold text-foreground mb-3">Chat Direct</h3>
+                <h3 className="font-semibold text-foreground mb-3">{t.contact.chatTitle}</h3>
                 <p className="text-sm text-muted-foreground mb-4">
-                  Besoin d'une réponse rapide ? Utilisez notre chat en direct 
-                  en cliquant sur l'icône en bas à droite de votre écran.
+                  {t.contact.chatDesc}
                 </p>
                 <div className="flex items-center gap-2 text-sm text-primary font-medium">
                   <div className="w-2 h-2 rounded-full bg-green-500" />
-                  Disponible maintenant
+                  {t.contact.chatAvailable}
                 </div>
               </motion.div>
             </div>

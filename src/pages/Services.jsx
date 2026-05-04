@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import {
   Apple, Weight, Cigarette, Moon, Sparkles, Brain, ArrowRight, CheckCircle2
 } from "lucide-react";
+import { useLang } from "@/lib/LanguageContext";
 
 const services = [
   {
@@ -100,6 +101,7 @@ const services = [
 ];
 
 export default function Services() {
+  const { t } = useLang();
   return (
     <div className="pt-20">
       {/* Header */}
@@ -113,14 +115,13 @@ export default function Services() {
           >
             <div className="inline-flex items-center gap-2 text-primary text-sm font-medium uppercase tracking-widest mb-4">
               <div className="precision-dot" />
-              Nos Services
+              {t.services.pageLabel}
             </div>
             <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-              L'Excellence au Service de Votre Santé
+              {t.services.pageTitle}
             </h1>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Une gamme complète de soins, de la nutrition clinique à la luxopuncture, 
-              conçue avec la rigueur d'un docteur en pharmacie.
+              {t.services.pageSubtitle}
             </p>
           </motion.div>
         </div>
@@ -163,7 +164,7 @@ export default function Services() {
 
                 <Link to="/contact">
                   <Button className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-8 gap-2">
-                    Prendre Rendez-vous
+                    {t.services.rdvBtn}
                     <ArrowRight className="w-4 h-4" />
                   </Button>
                 </Link>
@@ -187,15 +188,14 @@ export default function Services() {
       <section className="py-20 bg-primary/5">
         <div className="max-w-3xl mx-auto px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-foreground mb-4">
-            Prêt(e) à Commencer ?
+            {t.services.cta}
           </h2>
           <p className="text-muted-foreground mb-8">
-            Chaque parcours commence par une première consultation. Prenez rendez-vous 
-            pour découvrir le programme adapté à vos besoins.
+            {t.services.ctaDesc}
           </p>
           <Link to="/contact">
             <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-10 gap-2 h-14 text-base">
-              Réserver Ma Consultation
+              {t.services.ctaBtn}
               <ArrowRight className="w-4 h-4" />
             </Button>
           </Link>

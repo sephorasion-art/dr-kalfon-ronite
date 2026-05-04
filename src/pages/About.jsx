@@ -3,15 +3,16 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, GraduationCap, Stethoscope, Award, Users } from "lucide-react";
-
-const milestones = [
-  { year: "Doctorat", title: "Docteur en Pharmacie", desc: "Formation approfondie en pharmacologie, biochimie et sciences du médicament." },
-  { year: "Spécialisation", title: "Nutrition Clinique", desc: "Expertise en micronutrition et suivi diététique personnalisé." },
-  { year: "Innovation", title: "Luxopuncture", desc: "Formation et certification en techniques de luminothérapie réflexe." },
-  { year: "Aujourd'hui", title: "Clinique Tel Aviv", desc: "Cabinet dédié au bien-être global, au cœur de Tel Aviv." },
-];
+import { useLang } from "@/lib/LanguageContext";
 
 export default function About() {
+  const { t } = useLang();
+  const milestones = [
+    { year: t.about.m1year, title: t.about.m1title, desc: t.about.m1desc },
+    { year: t.about.m2year, title: t.about.m2title, desc: t.about.m2desc },
+    { year: t.about.m3year, title: t.about.m3title, desc: t.about.m3desc },
+    { year: t.about.m4year, title: t.about.m4title, desc: t.about.m4desc },
+  ];
   return (
     <div className="pt-20">
       {/* Hero */}
@@ -24,29 +25,18 @@ export default function About() {
             >
               <div className="inline-flex items-center gap-2 text-primary text-sm font-medium uppercase tracking-widest mb-4">
                 <div className="precision-dot" />
-                À propos
+                {t.about.label}
               </div>
               <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6 leading-tight">
-                Dr. Ronit Kalfon
+                {t.about.title}
               </h1>
               <p className="text-xl text-primary font-medium mb-6">
-                Docteur en Pharmacie · Nutrition · Luxopuncture
+                {t.about.subtitle}
               </p>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
-                <p>
-                  Docteur en pharmacie de formation, Dr. Ronit Kalfon a consacré sa carrière 
-                  à l'intersection de la science pharmaceutique et du bien-être holistique.
-                </p>
-                <p>
-                  Son expertise unique en pharmacologie lui permet d'offrir des prescriptions 
-                  nutritionnelles d'une précision exceptionnelle, tenant compte de chaque 
-                  interaction et de chaque besoin biologique de ses patients.
-                </p>
-                <p>
-                  Installée au cœur de Tel Aviv, elle accompagne ses patients avec une 
-                  approche globale mêlant nutrition clinique, suivi diététique personnalisé 
-                  et luxopuncture — une combinaison rare et particulièrement efficace.
-                </p>
+                <p>{t.about.bio1}</p>
+                <p>{t.about.bio2}</p>
+                <p>{t.about.bio3}</p>
               </div>
             </motion.div>
 
@@ -73,10 +63,10 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { icon: GraduationCap, label: "Docteur en Pharmacie", value: "PhD" },
-              { icon: Stethoscope, label: "Ans d'Expérience", value: "15+" },
-              { icon: Users, label: "Patients Accompagnés", value: "2000+" },
-              { icon: Award, label: "Spécialisations", value: "3" },
+              { icon: GraduationCap, label: t.about.stat1, value: "PhD" },
+              { icon: Stethoscope, label: t.about.stat2, value: "15+" },
+              { icon: Users, label: t.about.stat3, value: "2000+" },
+              { icon: Award, label: t.about.stat4, value: "3" },
             ].map((stat) => (
               <motion.div
                 key={stat.label}
@@ -100,10 +90,8 @@ export default function About() {
       <section className="py-20 bg-secondary/30">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-foreground mb-4">Parcours Professionnel</h2>
-            <p className="text-muted-foreground">
-              Un cheminement guidé par la rigueur scientifique et la passion du soin.
-            </p>
+            <h2 className="text-3xl font-bold text-foreground mb-4">{t.about.journeyTitle}</h2>
+            <p className="text-muted-foreground">{t.about.journeySubtitle}</p>
           </div>
           
           <div className="space-y-8">
@@ -147,28 +135,24 @@ export default function About() {
               />
             </div>
             <div>
-              <h2 className="text-3xl font-bold text-foreground mb-6">Mon Approche</h2>
+              <h2 className="text-3xl font-bold text-foreground mb-6">{t.about.approachTitle}</h2>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  <strong className="text-foreground">La précision pharmaceutique au service de la nutrition.</strong>{" "}
-                  Mon parcours de docteur en pharmacie me confère une compréhension approfondie 
-                  des mécanismes biologiques. Chaque prescription nutritionnelle est élaborée 
-                  avec la même rigueur qu'une prescription médicamenteuse.
+                  <strong className="text-foreground">{t.about.approach1title}</strong>{" "}
+                  {t.about.approach1}
                 </p>
                 <p>
-                  <strong className="text-foreground">La luxopuncture comme catalyseur.</strong>{" "}
-                  En complément du suivi nutritionnel, la luxopuncture permet d'agir 
-                  directement sur le système endocrinien, accélérant et pérennisant les résultats.
+                  <strong className="text-foreground">{t.about.approach2title}</strong>{" "}
+                  {t.about.approach2}
                 </p>
                 <p>
-                  <strong className="text-foreground">Un accompagnement humain.</strong>{" "}
-                  Au-delà de la science, chaque patient est unique. J'accorde une importance 
-                  fondamentale à l'écoute et à l'adaptation de chaque protocole.
+                  <strong className="text-foreground">{t.about.approach3title}</strong>{" "}
+                  {t.about.approach3}
                 </p>
               </div>
               <Link to="/contact" className="inline-block mt-8">
                 <Button className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-8 gap-2">
-                  Me Contacter
+                  {t.about.contactBtn}
                   <ArrowRight className="w-4 h-4" />
                 </Button>
               </Link>
