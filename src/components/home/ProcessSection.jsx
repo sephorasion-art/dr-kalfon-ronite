@@ -1,35 +1,38 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Search, FlaskConical, Sun, HeartPulse } from "lucide-react";
-
-const steps = [
-  {
-    icon: Search,
-    title: "Analyse Approfondie",
-    description: "Bilan complet intégrant votre historique médical, vos habitudes alimentaires et vos objectifs personnels.",
-    detail: "Explorations biologiques et anamnèse pharmaceutique"
-  },
-  {
-    icon: FlaskConical,
-    title: "Équilibre Moléculaire",
-    description: "Élaboration d'un protocole nutritionnel précis, enrichi par l'expertise en pharmacologie clinique.",
-    detail: "Micro et macronutriments dosés au plus juste"
-  },
-  {
-    icon: Sun,
-    title: "Luxopuncture®",
-    description: "Séances de luxopuncture ciblées pour stimuler les points réflexes et rééquilibrer le système endocrinien.",
-    detail: "Infrarouge non invasif sur les méridiens"
-  },
-  {
-    icon: HeartPulse,
-    title: "Vitalité Durable",
-    description: "Suivi continu et ajustements pour garantir des résultats pérennes et un bien-être au quotidien.",
-    detail: "Consultations de suivi et réévaluation"
-  },
-];
+import { useLang } from "@/lib/LanguageContext";
 
 export default function ProcessSection() {
+  const { t } = useLang();
+
+  const steps = [
+    {
+      icon: Search,
+      title: t.process.s1title,
+      description: t.process.s1desc,
+      detail: t.process.s1detail,
+    },
+    {
+      icon: FlaskConical,
+      title: t.process.s2title,
+      description: t.process.s2desc,
+      detail: t.process.s2detail,
+    },
+    {
+      icon: Sun,
+      title: t.process.s3title,
+      description: t.process.s3desc,
+      detail: t.process.s3detail,
+    },
+    {
+      icon: HeartPulse,
+      title: t.process.s4title,
+      description: t.process.s4desc,
+      detail: t.process.s4detail,
+    },
+  ];
+
   return (
     <section className="py-32 relative overflow-hidden">
       <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
@@ -44,18 +47,17 @@ export default function ProcessSection() {
         >
           <div className="inline-flex items-center gap-2 text-primary text-sm font-medium uppercase tracking-widest mb-4">
             <div className="precision-dot" />
-            Protocole de soin
+            {t.process.badge}
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Comment se déroule un suivi ?
+            {t.process.title}
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Un accompagnement personnalisé, étape par étape, pour vous aider à atteindre vos objectifs durablement.
+            {t.process.subtitle}
           </p>
         </motion.div>
 
         <div className="relative">
-          {/* Vertical line */}
           <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-primary/20 via-primary/40 to-primary/20 -translate-x-px" />
 
           <div className="space-y-16 lg:space-y-24">
@@ -70,11 +72,10 @@ export default function ProcessSection() {
                   index % 2 === 1 ? "lg:flex-row-reverse" : ""
                 }`}
               >
-                {/* Content */}
                 <div className={`flex-1 ${index % 2 === 1 ? "lg:text-right" : ""}`}>
                   <div className={`inline-flex items-center gap-3 mb-4 ${index % 2 === 1 ? "lg:flex-row-reverse" : ""}`}>
                     <span className="text-xs font-bold text-primary/50 uppercase tracking-widest">
-                      Étape {String(index + 1).padStart(2, "0")}
+                      {t.process.step} {String(index + 1).padStart(2, "0")}
                     </span>
                   </div>
                   <h3 className="text-2xl font-bold text-foreground mb-3">{step.title}</h3>
@@ -85,14 +86,12 @@ export default function ProcessSection() {
                   </div>
                 </div>
 
-                {/* Center dot */}
                 <div className="relative z-10 flex items-center justify-center">
                   <div className="w-16 h-16 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center">
                     <step.icon className="w-7 h-7 text-primary" />
                   </div>
                 </div>
 
-                {/* Spacer for layout */}
                 <div className="flex-1 hidden lg:block" />
               </motion.div>
             ))}
