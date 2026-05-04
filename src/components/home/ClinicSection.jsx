@@ -41,19 +41,19 @@ export default function ClinicSection() {
               Notre espace
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-              Un Cabinet de Quartier à Tel Aviv
+              Un Cabinet Médical au Cœur de Tel Aviv
             </h2>
             <p className="text-muted-foreground mb-8 leading-relaxed">
-              Un petit cabinet chaleureux et accueillant, où chaque patient est reçu 
-              dans un cadre calme et bienveillant. Ici, on prend le temps d'écouter 
-              et d'accompagner, loin de l'agitation du monde médical classique.
+              Dans un cadre calme et confidentiel, le Dr. Kalfon reçoit ses patients 
+              sur rendez-vous pour des consultations approfondies. Chaque prise en charge 
+              est individualisée, dans le respect du secret médical et du confort du patient.
             </p>
 
             <div className="space-y-6">
               {[
-                { icon: Shield, title: "Suivi Personnalisé", desc: "Chaque consultation est unique, adaptée à votre situation et vos besoins" },
-                { icon: MapPin, title: "Facilement Accessible", desc: "Cabinet de quartier au cœur de Tel Aviv, facile d'accès" },
-                { icon: Leaf, title: "Atmosphère Apaisante", desc: "Un espace calme et chaleureux pour se sentir à l'aise dès la première visite" },
+                { icon: Shield, title: "Suivi Médical Individualisé", desc: "Chaque consultation est adaptée à votre profil, vos antécédents et vos objectifs" },
+                { icon: MapPin, title: "Cabinet sur Rendez-vous", desc: "Situé au cœur de Tel Aviv, accessible et confidentiel" },
+                { icon: Leaf, title: "Environnement Apaisant", desc: "Un espace pensé pour la sérénité et la qualité de la prise en charge" },
               ].map((item) => (
                 <div key={item.title} className="flex gap-4">
                   <div className="shrink-0 w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
