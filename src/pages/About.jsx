@@ -129,7 +129,7 @@ export default function About() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="rounded-3xl overflow-hidden shadow-lg">
               <img
-                src="https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/9d8558fa6_generated_398aef9c.png"
+                src="https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/753244bf7_image.png"
                 alt="Clinique Dr. Kalfon Tel Aviv"
                 className="w-full h-[350px] object-cover"
               />
