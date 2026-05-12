@@ -4,6 +4,7 @@ import ServicesPreview from "../components/home/ServicesPreview";
 import ProcessSection from "../components/home/ProcessSection";
 import ClinicSection from "../components/home/ClinicSection";
 import CTASection from "../components/home/CTASection";
+import PricingSection from "../components/home/PricingSection";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <ServicesPreview />
       <ProcessSection />
       <ClinicSection />
+      <PricingSection />
       <CTASection />
     </div>
   );
