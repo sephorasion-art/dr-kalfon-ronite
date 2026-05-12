@@ -7,101 +7,19 @@ import {
 } from "lucide-react";
 import { useLang } from "@/lib/LanguageContext";
 
-const services = [
-  {
-    id: "nutrition",
-    icon: Apple,
-    title: "Nutrition Clinique & Suivi Diététique",
-    subtitle: "Un programme sur mesure, guidé par la science",
-    description: "Grâce à son doctorat en pharmacie, Dr. Kalfon élabore des programmes nutritionnels d'une précision inégalée. Chaque prescription tient compte de votre profil biologique complet, de vos interactions médicamenteuses et de vos besoins physiologiques spécifiques.",
-    benefits: [
-      "Bilan nutritionnel approfondi et personnalisé",
-      "Plans alimentaires adaptés à votre profil médical",
-      "Suivi régulier et ajustements dynamiques",
-      "Complémentation nutritionnelle ciblée",
-      "Prise en compte des interactions médicamenteuses"
-    ],
-    image: "https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/47c7a5246_generated_71578a0c.png"
-  },
-  {
-    id: "weight",
-    icon: Weight,
-    title: "Perte de Poids",
-    subtitle: "Libérez-vous des compulsions alimentaires",
-    description: "La luxopuncture agit sur les points réflexes du système endocrinien pour réduire les compulsions alimentaires de manière naturelle. Associée à un suivi diététique rigoureux, cette approche offre des résultats durables.",
-    benefits: [
-      "Réduction naturelle de l'appétit",
-      "Diminution des compulsions alimentaires",
-      "Rééquilibrage hormonal endocrinien",
-      "Programme alimentaire personnalisé",
-      "Suivi sur la durée pour des résultats pérennes"
-    ],
-    image: "https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/71d0c3c8c_generated_5b4d0f78.png"
-  },
-  {
-    id: "tabac",
-    icon: Cigarette,
-    title: "Arrêt du Tabac",
-    subtitle: "Protocole de sevrage en douceur",
-    description: "La luxopuncture stimule la production d'endorphines naturelles, réduisant significativement les symptômes de sevrage et les envies. Un accompagnement complet pour une libération définitive.",
-    benefits: [
-      "Réduction rapide des envies de fumer",
-      "Atténuation des symptômes de sevrage",
-      "Stimulation naturelle des endorphines",
-      "Gestion du stress post-arrêt",
-      "Prévention de la prise de poids associée"
-    ],
-    image: "https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/71d0c3c8c_generated_5b4d0f78.png"
-  },
-  {
-    id: "sommeil",
-    icon: Moon,
-    title: "Sommeil & Relaxation",
-    subtitle: "Retrouvez un sommeil réparateur",
-    description: "En agissant sur les méridiens liés au cycle circadien, la luxopuncture aide à réguler naturellement le sommeil et à réduire le stress chronique, sans recours aux médicaments.",
-    benefits: [
-      "Régulation du cycle circadien",
-      "Réduction du stress et de l'anxiété",
-      "Amélioration de la qualité du sommeil",
-      "Détente profonde dès la première séance",
-      "Alternative naturelle aux somnifères"
-    ],
-    image: "https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/71d0c3c8c_generated_5b4d0f78.png"
-  },
-  {
-    id: "rajeunissement",
-    icon: Sparkles,
-    title: "Rajeunissement Facial",
-    subtitle: "Éclat naturel, sans injection",
-    description: "La stimulation par lumière infrarouge active naturellement la production de collagène et d'élastine. Un soin non invasif qui révèle l'éclat de votre peau.",
-    benefits: [
-      "Stimulation naturelle du collagène",
-      "Amélioration du teint et de l'éclat",
-      "Réduction des ridules",
-      "Raffermissement cutané visible",
-      "Zéro injection, zéro douleur"
-    ],
-    image: "https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/71d0c3c8c_generated_5b4d0f78.png"
-  },
-  {
-    id: "addictions",
-    icon: Brain,
-    title: "Gestion des Addictions",
-    subtitle: "Rééquilibrage profond du système nerveux",
-    description: "La luxopuncture offre un soutien précieux dans la prise en charge des comportements addictifs en rééquilibrant le système endocrinien et en favorisant la production naturelle de neurotransmetteurs.",
-    benefits: [
-      "Rééquilibrage du système endocrinien",
-      "Soutien au sevrage comportemental",
-      "Stimulation des neurotransmetteurs du bien-être",
-      "Accompagnement global et personnalisé",
-      "Approche non médicamenteuse"
-    ],
-    image: "https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/71d0c3c8c_generated_5b4d0f78.png"
-  },
+const icons = [Apple, Weight, Cigarette, Moon, Sparkles, Brain];
+const images = [
+  "https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/47c7a5246_generated_71578a0c.png",
+  "https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/71d0c3c8c_generated_5b4d0f78.png",
+  "https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/71d0c3c8c_generated_5b4d0f78.png",
+  "https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/71d0c3c8c_generated_5b4d0f78.png",
+  "https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/71d0c3c8c_generated_5b4d0f78.png",
+  "https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/71d0c3c8c_generated_5b4d0f78.png",
 ];
 
 export default function Services() {
   const { t, isRTL } = useLang();
+  const services = t.servicesPage.s.map((s, i) => ({ ...s, icon: icons[i], image: images[i], id: i }));
   return (
     <div className="pt-20">
       {/* Header */}
@@ -132,7 +50,7 @@ export default function Services() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8 space-y-24">
           {services.map((service, index) => (
             <motion.div
-              key={service.id}
+              key={index}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}

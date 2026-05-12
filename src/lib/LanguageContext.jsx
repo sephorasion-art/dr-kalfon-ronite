@@ -144,6 +144,16 @@ export const translations = {
       navTitle: "Navigation",
       rights: "Tous droits réservés.",
     },
+    servicesPage: {
+      s: [
+        { title: "Nutrition Clinique & Suivi Diététique", subtitle: "Un programme sur mesure, guidé par la science", description: "Grâce à son doctorat en pharmacie, Dr. Kalfon élabore des programmes nutritionnels d'une précision inégalée. Chaque prescription tient compte de votre profil biologique complet, de vos interactions médicamenteuses et de vos besoins physiologiques spécifiques.", benefits: ["Bilan nutritionnel approfondi et personnalisé", "Plans alimentaires adaptés à votre profil médical", "Suivi régulier et ajustements dynamiques", "Complémentation nutritionnelle ciblée", "Prise en compte des interactions médicamenteuses"] },
+        { title: "Perte de Poids", subtitle: "Libérez-vous des compulsions alimentaires", description: "La luxopuncture agit sur les points réflexes du système endocrinien pour réduire les compulsions alimentaires de manière naturelle. Associée à un suivi diététique rigoureux, cette approche offre des résultats durables.", benefits: ["Réduction naturelle de l'appétit", "Diminution des compulsions alimentaires", "Rééquilibrage hormonal endocrinien", "Programme alimentaire personnalisé", "Suivi sur la durée pour des résultats pérennes"] },
+        { title: "Arrêt du Tabac", subtitle: "Protocole de sevrage en douceur", description: "La luxopuncture stimule la production d'endorphines naturelles, réduisant significativement les symptômes de sevrage et les envies. Un accompagnement complet pour une libération définitive.", benefits: ["Réduction rapide des envies de fumer", "Atténuation des symptômes de sevrage", "Stimulation naturelle des endorphines", "Gestion du stress post-arrêt", "Prévention de la prise de poids associée"] },
+        { title: "Sommeil & Relaxation", subtitle: "Retrouvez un sommeil réparateur", description: "En agissant sur les méridiens liés au cycle circadien, la luxopuncture aide à réguler naturellement le sommeil et à réduire le stress chronique, sans recours aux médicaments.", benefits: ["Régulation du cycle circadien", "Réduction du stress et de l'anxiété", "Amélioration de la qualité du sommeil", "Détente profonde dès la première séance", "Alternative naturelle aux somnifères"] },
+        { title: "Rajeunissement Facial", subtitle: "Éclat naturel, sans injection", description: "La stimulation par lumière infrarouge active naturellement la production de collagène et d'élastine. Un soin non invasif qui révèle l'éclat de votre peau.", benefits: ["Stimulation naturelle du collagène", "Amélioration du teint et de l'éclat", "Réduction des ridules", "Raffermissement cutané visible", "Zéro injection, zéro douleur"] },
+        { title: "Gestion des Addictions", subtitle: "Rééquilibrage profond du système nerveux", description: "La luxopuncture offre un soutien précieux dans la prise en charge des comportements addictifs en rééquilibrant le système endocrinien et en favorisant la production naturelle de neurotransmetteurs.", benefits: ["Rééquilibrage du système endocrinien", "Soutien au sevrage comportemental", "Stimulation des neurotransmetteurs du bien-être", "Accompagnement global et personnalisé", "Approche non médicamenteuse"] },
+      ],
+    },
     servicesPreview: {
       s1title: "Nutrition Clinique", s1desc: "Programmes nutritionnels personnalisés fondés sur une analyse pharmaceutique précise de vos besoins.", s1note: "Prescription adaptée à votre profil biologique",
       s2title: "Perte de Poids", s2desc: "Réduction des compulsions alimentaires par luxopuncture et suivi diététique sur mesure.", s2note: "Stimulation des points réflexes endocriniens",
@@ -339,6 +349,16 @@ export const translations = {
       s1: "Nutrition & Dietetics", s2: "Luxopuncture", s3: "Stop Smoking", s4: "Weight Management",
       navTitle: "Navigation",
       rights: "All rights reserved.",
+    },
+    servicesPage: {
+      s: [
+        { title: "Clinical Nutrition & Dietary Follow-up", subtitle: "A tailored program, guided by science", description: "Thanks to her doctorate in pharmacy, Dr. Kalfon develops nutritional programs of unparalleled precision. Each prescription takes into account your complete biological profile, drug interactions and specific physiological needs.", benefits: ["In-depth and personalized nutritional assessment", "Dietary plans adapted to your medical profile", "Regular follow-up and dynamic adjustments", "Targeted nutritional supplementation", "Consideration of drug interactions"] },
+        { title: "Weight Loss", subtitle: "Free yourself from food compulsions", description: "Luxopuncture acts on the reflex points of the endocrine system to naturally reduce food compulsions. Combined with rigorous dietary follow-up, this approach offers lasting results.", benefits: ["Natural appetite reduction", "Reduction of food compulsions", "Endocrine hormonal rebalancing", "Personalized dietary program", "Long-term follow-up for lasting results"] },
+        { title: "Stop Smoking", subtitle: "Gentle withdrawal protocol", description: "Luxopuncture stimulates the production of natural endorphins, significantly reducing withdrawal symptoms and cravings. Comprehensive support for definitive freedom.", benefits: ["Rapid reduction of smoking cravings", "Attenuation of withdrawal symptoms", "Natural stimulation of endorphins", "Post-cessation stress management", "Prevention of associated weight gain"] },
+        { title: "Sleep & Relaxation", subtitle: "Rediscover restful sleep", description: "By acting on the meridians linked to the circadian cycle, luxopuncture helps naturally regulate sleep and reduce chronic stress, without recourse to medication.", benefits: ["Regulation of the circadian cycle", "Reduction of stress and anxiety", "Improvement of sleep quality", "Deep relaxation from the first session", "Natural alternative to sleeping pills"] },
+        { title: "Facial Rejuvenation", subtitle: "Natural radiance, without injection", description: "Infrared light stimulation naturally activates the production of collagen and elastin. A non-invasive treatment that reveals the radiance of your skin.", benefits: ["Natural collagen stimulation", "Improvement of complexion and radiance", "Reduction of fine lines", "Visible skin firming", "Zero injection, zero pain"] },
+        { title: "Addiction Management", subtitle: "Deep rebalancing of the nervous system", description: "Luxopuncture offers valuable support in managing addictive behaviors by rebalancing the endocrine system and promoting the natural production of neurotransmitters.", benefits: ["Rebalancing of the endocrine system", "Support for behavioral withdrawal", "Stimulation of well-being neurotransmitters", "Comprehensive and personalized support", "Non-medicinal approach"] },
+      ],
     },
     servicesPreview: {
       s1title: "Clinical Nutrition", s1desc: "Personalized nutritional programs based on precise pharmaceutical analysis of your needs.", s1note: "Prescription adapted to your biological profile",
@@ -536,6 +556,16 @@ export const translations = {
       navTitle: "ניווט",
       rights: "כל הזכויות שמורות.",
     },
+    servicesPage: {
+      s: [
+        { title: "תזונה קלינית וליווי תזונתי", subtitle: "תוכנית אישית המבוססת על מדע", description: "בזכות הדוקטורט שלה בפרמקולוגיה, ד\"ר קלפון מפתחת תוכניות תזונה בדיוק ללא תחרות. כל מרשם מתחשב בפרופיל הביולוגי המלא שלכם, באינטראקציות התרופתיות ובצרכים הפיזיולוגיים הספציפיים שלכם.", benefits: ["הערכה תזונתית מעמיקה ואישית", "תוכניות תזונה מותאמות לפרופיל הרפואי שלכם", "מעקב סדיר והתאמות דינמיות", "תוספת תזונתית ממוקדת", "התחשבות באינטראקציות תרופתיות"] },
+        { title: "ירידה במשקל", subtitle: "השתחררו מכפייתיות האכילה", description: "הלוקסופונקטורה פועלת על נקודות הרפלקס של המערכת האנדוקרינית כדי להפחית באופן טבעי את כפייתיות האכילה. בשילוב ליווי תזונתי קפדני, גישה זו מציעה תוצאות מתמשכות.", benefits: ["הפחתה טבעית של התיאבון", "צמצום כפייתיות האכילה", "איזון מחדש הורמונלי אנדוקריני", "תוכנית תזונה אישית", "מעקב לאורך זמן לתוצאות מתמשכות"] },
+        { title: "גמילה מעישון", subtitle: "פרוטוקול גמילה עדין", description: "הלוקסופונקטורה מגרה את ייצור האנדורפינים הטבעיים, ומפחיתה משמעותית את תסמיני הגמילה ואת הרצון לעשן. ליווי מקיף לחופש מוחלט.", benefits: ["הפחתה מהירה של הדחף לעשן", "הקלת תסמיני הגמילה", "גירוי טבעי של אנדורפינים", "ניהול לחץ לאחר הפסקת העישון", "מניעת עלייה במשקל הנלווית"] },
+        { title: "שינה ורלקסציה", subtitle: "מצאו מחדש שינה איכותית", description: "על ידי פעולה על המרידיאנים הקשורים למחזור הצירקדי, הלוקסופונקטורה עוזרת לווסת את השינה באופן טבעי ולהפחית לחץ כרוני, ללא שימוש בתרופות.", benefits: ["ויסות מחזור הצירקדי", "הפחתת לחץ וחרדה", "שיפור איכות השינה", "רלקסציה עמוקה מהסשן הראשון", "חלופה טבעית לכדורי שינה"] },
+        { title: "התחדשות פנים", subtitle: "זוהר טבעי, ללא הזרקות", description: "גירוי אור אינפרא-אדום מפעיל באופן טבעי את ייצור הקולגן והאלסטין. טיפול לא פולשני המגלה את זוהר עורכם.", benefits: ["גירוי טבעי של קולגן", "שיפור גוון העור והזוהר", "הפחתת קמטוטים", "הידוק עור ניכר", "ללא הזרקות, ללא כאב"] },
+        { title: "ניהול התמכרויות", subtitle: "איזון מחדש עמוק של מערכת העצבים", description: "הלוקסופונקטורה מציעה תמיכה יקרת ערך בטיפול בהתנהגויות ממכרות על ידי איזון מחדש של המערכת האנדוקרינית וקידום הייצור הטבעי של נוירוטרנסמיטורים.", benefits: ["איזון מחדש של המערכת האנדוקרינית", "תמיכה בגמילה התנהגותית", "גירוי נוירוטרנסמיטורים של רווחה", "ליווי כולל ואישי", "גישה לא תרופתית"] },
+      ],
+    },
     servicesPreview: {
       s1title: "תזונה קלינית", s1desc: "תוכניות תזונה אישיות המבוססות על ניתוח מדעי מדויק של צרכיכם.", s1note: "מרשם המותאם לפרופיל הביולוגי שלכם",
       s2title: "ירידה במשקל", s2desc: "הפחתת כפייתיות אכילה באמצעות לוקסופונקטורה וליווי תזונתי מותאם.", s2note: "גירוי נקודות רפלקס אנדוקריניות",
@@ -731,6 +761,16 @@ export const translations = {
       s1: "Питание и диетология", s2: "Люксопунктура", s3: "Отказ от курения", s4: "Управление весом",
       navTitle: "Навигация",
       rights: "Все права защищены.",
+    },
+    servicesPage: {
+      s: [
+        { title: "Клиническое питание и диетическое наблюдение", subtitle: "Программа на заказ, основанная на науке", description: "Благодаря докторантуре в области фармации д-р Кальфон разрабатывает нутрициологические программы непревзойдённой точности. Каждый рецепт учитывает ваш полный биологический профиль, лекарственные взаимодействия и конкретные физиологические потребности.", benefits: ["Углублённая и персонализированная нутрициологическая оценка", "Диетические планы, адаптированные к вашему медицинскому профилю", "Регулярное наблюдение и динамические корректировки", "Целевая нутрициологическая поддержка", "Учёт лекарственных взаимодействий"] },
+        { title: "Снижение веса", subtitle: "Освободитесь от пищевых компульсий", description: "Люксопунктура воздействует на рефлекторные точки эндокринной системы для естественного снижения пищевых компульсий. В сочетании с тщательным диетическим наблюдением этот подход обеспечивает долгосрочные результаты.", benefits: ["Естественное снижение аппетита", "Уменьшение пищевых компульсий", "Эндокринный гормональный ребаланс", "Персонализированная диетическая программа", "Долгосрочное наблюдение для устойчивых результатов"] },
+        { title: "Отказ от курения", subtitle: "Мягкий протокол отказа", description: "Люксопунктура стимулирует выработку природных эндорфинов, значительно снижая симптомы отмены и тягу. Комплексное сопровождение для окончательного освобождения.", benefits: ["Быстрое снижение тяги к курению", "Ослабление симптомов отмены", "Естественная стимуляция эндорфинов", "Управление стрессом после отказа", "Профилактика сопутствующего набора веса"] },
+        { title: "Сон и расслабление", subtitle: "Обретите снова полноценный сон", description: "Воздействуя на меридианы, связанные с циркадным циклом, люксопунктура помогает естественно регулировать сон и снижать хронический стресс без применения лекарств.", benefits: ["Регуляция циркадного цикла", "Снижение стресса и тревоги", "Улучшение качества сна", "Глубокое расслабление с первого сеанса", "Природная альтернатива снотворным"] },
+        { title: "Омоложение лица", subtitle: "Естественное сияние без инъекций", description: "Стимуляция инфракрасным светом естественным образом активирует выработку коллагена и эластина. Неинвазивный уход, раскрывающий сияние вашей кожи.", benefits: ["Естественная стимуляция коллагена", "Улучшение тона и сияния кожи", "Уменьшение мелких морщин", "Видимое укрепление кожи", "Ноль инъекций, ноль боли"] },
+        { title: "Управление зависимостями", subtitle: "Глубокий ребаланс нервной системы", description: "Люксопунктура предлагает ценную поддержку в работе с зависимым поведением, восстанавливая баланс эндокринной системы и способствуя естественной выработке нейротрансмиттеров.", benefits: ["Восстановление баланса эндокринной системы", "Поддержка поведенческой отмены", "Стимуляция нейротрансмиттеров благополучия", "Комплексное и персонализированное сопровождение", "Безмедикаментозный подход"] },
+      ],
     },
     servicesPreview: {
       s1title: "Клиническое питание", s1desc: "Персональные нутрициологические программы на основе точного фармацевтического анализа ваших потребностей.", s1note: "Рецепт, адаптированный к вашему биологическому профилю",
