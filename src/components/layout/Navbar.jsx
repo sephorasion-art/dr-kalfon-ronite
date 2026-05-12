@@ -10,7 +10,7 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const location = useLocation();
-  const { t } = useLang();
+  const { t, isRTL } = useLang();
 
   const navLinks = [
     { label: t.nav.home, path: "/" },
@@ -37,7 +37,7 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+        <div className={`flex items-center justify-between h-20 ${isRTL ? "flex-row-reverse" : ""}`}>
           <Link to="/" className="flex items-center gap-3">
             <div className="precision-dot scale-[2]" />
             <div className="leading-tight">
@@ -50,7 +50,7 @@ export default function Navbar() {
             </div>
           </Link>
 
-          <div className="hidden lg:flex items-center gap-8">
+          <div className={`hidden lg:flex items-center gap-8 ${isRTL ? "flex-row-reverse" : ""}`}>
             {navLinks.map((link) => (
               <Link
                 key={link.path}

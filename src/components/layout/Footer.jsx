@@ -4,7 +4,7 @@ import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import { useLang } from "@/lib/LanguageContext";
 
 export default function Footer() {
-  const { t } = useLang();
+  const { t, isRTL } = useLang();
   return (
     <footer className="bg-foreground text-white/80">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-20">
@@ -67,7 +67,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-16 pt-8 border-t border-white/10 text-center text-xs text-white/40">
+        <div className={`mt-16 pt-8 border-t border-white/10 text-xs text-white/40 ${isRTL ? "text-right" : "text-center"}`}>
           © {new Date().getFullYear()} Dr. Ronit Kalfon. {t.footer.rights}
         </div>
       </div>
