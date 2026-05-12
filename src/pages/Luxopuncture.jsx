@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Zap, ShieldCheck, Clock, Sparkles, Heart, Brain, ChevronDown } from "lucide-react";
+import { ArrowRight, ArrowLeft, Zap, ShieldCheck, Clock, Sparkles, Heart, Brain, ChevronDown } from "lucide-react";
 import { useLang } from "@/lib/LanguageContext";
 
 function FaqItem({ q, a }) {
@@ -26,7 +26,7 @@ function FaqItem({ q, a }) {
 }
 
 export default function Luxopuncture() {
-  const { t } = useLang();
+  const { t, isRTL } = useLang();
   const lx = t.luxo;
 
   const hormones = [
@@ -208,7 +208,7 @@ export default function Luxopuncture() {
           <Link to="/contact">
             <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-10 gap-2 h-14 text-base">
               {lx.ctaBtn}
-              <ArrowRight className="w-4 h-4" />
+              {isRTL ? <ArrowLeft className="w-4 h-4" /> : <ArrowRight className="w-4 h-4" />}
             </Button>
           </Link>
         </div>

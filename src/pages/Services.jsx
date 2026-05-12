@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import {
-  Apple, Weight, Cigarette, Moon, Sparkles, Brain, ArrowRight, CheckCircle2
+  Apple, Weight, Cigarette, Moon, Sparkles, Brain, ArrowRight, ArrowLeft, CheckCircle2
 } from "lucide-react";
 import { useLang } from "@/lib/LanguageContext";
 
@@ -101,7 +101,7 @@ const services = [
 ];
 
 export default function Services() {
-  const { t } = useLang();
+  const { t, isRTL } = useLang();
   return (
     <div className="pt-20">
       {/* Header */}
@@ -165,7 +165,7 @@ export default function Services() {
                 <Link to="/contact">
                   <Button className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-8 gap-2">
                     {t.services.rdvBtn}
-                    <ArrowRight className="w-4 h-4" />
+                    {isRTL ? <ArrowLeft className="w-4 h-4" /> : <ArrowRight className="w-4 h-4" />}
                   </Button>
                 </Link>
               </div>
@@ -196,7 +196,7 @@ export default function Services() {
           <Link to="/contact">
             <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-10 gap-2 h-14 text-base">
               {t.services.ctaBtn}
-              <ArrowRight className="w-4 h-4" />
+              {isRTL ? <ArrowLeft className="w-4 h-4" /> : <ArrowRight className="w-4 h-4" />}
             </Button>
           </Link>
         </div>

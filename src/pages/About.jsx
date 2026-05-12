@@ -2,11 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, GraduationCap, Stethoscope, Award, Users } from "lucide-react";
+import { ArrowRight, ArrowLeft, GraduationCap, Stethoscope, Award, Users } from "lucide-react";
 import { useLang } from "@/lib/LanguageContext";
 
 export default function About() {
-  const { t } = useLang();
+  const { t, isRTL } = useLang();
   const milestones = [
     { year: t.about.m1year, title: t.about.m1title, desc: t.about.m1desc },
     { year: t.about.m2year, title: t.about.m2title, desc: t.about.m2desc },
@@ -153,7 +153,7 @@ export default function About() {
               <Link to="/contact" className="inline-block mt-8">
                 <Button className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-8 gap-2">
                   {t.about.contactBtn}
-                  <ArrowRight className="w-4 h-4" />
+                  {isRTL ? <ArrowLeft className="w-4 h-4" /> : <ArrowRight className="w-4 h-4" />}
                 </Button>
               </Link>
             </div>

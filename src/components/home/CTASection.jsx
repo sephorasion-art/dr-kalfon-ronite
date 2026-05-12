@@ -2,11 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ArrowLeft } from "lucide-react";
 import { useLang } from "@/lib/LanguageContext";
 
 export default function CTASection() {
-  const { t } = useLang();
+  const { t, isRTL } = useLang();
   return (
     <section className="py-32 relative overflow-hidden">
       <div className="absolute inset-0">
@@ -38,7 +38,7 @@ export default function CTASection() {
             <Link to="/contact">
               <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-10 gap-2 text-base h-14">
                 {t.cta.btn}
-                <ArrowRight className="w-4 h-4" />
+                {isRTL ? <ArrowLeft className="w-4 h-4" /> : <ArrowRight className="w-4 h-4" />}
               </Button>
             </Link>
           </div>

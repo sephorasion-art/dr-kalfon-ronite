@@ -1,11 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Apple, Cigarette, Moon, Sparkles, Weight, Brain, ArrowRight } from "lucide-react";
+import { Apple, Cigarette, Moon, Sparkles, Weight, Brain, ArrowRight, ArrowLeft } from "lucide-react";
 import { useLang } from "@/lib/LanguageContext";
 
 export default function ServicesPreview() {
-  const { t } = useLang();
+  const { t, isRTL } = useLang();
 
   const services = [
     { icon: Apple, title: t.servicesPreview.s1title, description: t.servicesPreview.s1desc, note: t.servicesPreview.s1note, color: "text-primary", bg: "bg-primary/10" },
@@ -69,7 +69,7 @@ export default function ServicesPreview() {
               className="inline-flex items-center gap-2 text-primary font-medium hover:underline underline-offset-4"
             >
               {t.services.more}
-              <ArrowRight className="w-4 h-4" />
+              {isRTL ? <ArrowLeft className="w-4 h-4" /> : <ArrowRight className="w-4 h-4" />}
             </motion.button>
           </Link>
         </div>
