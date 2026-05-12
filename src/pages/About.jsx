@@ -48,7 +48,7 @@ export default function About() {
             >
               <div className="rounded-3xl overflow-hidden shadow-xl">
                 <img
-                  src="https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/95c2e45d4_generated_47a784df.png"
+                  src="https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/b20127226_WhatsApp-Image-2025-03-21-at-164200.jpg"
                   alt="Dr. Ronit Kalfon"
                   className="w-full h-[500px] object-cover"
                 />
