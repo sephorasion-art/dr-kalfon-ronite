@@ -25,6 +25,7 @@ export const translations = {
       stat2: "Clinique privée",
       stat3: "En France",
       stat3label: "Formée",
+      luxoCardDesc: "Technique de lumière infrarouge non invasive pour le bien-être global",
     },
     services: {
       badge: "Écosystème de soins",
@@ -220,6 +221,7 @@ export const translations = {
       stat2: "Private clinic",
       stat3: "Trained",
       stat3label: "In France",
+      luxoCardDesc: "Non-invasive infrared light technique for global well-being",
     },
     services: {
       badge: "Care ecosystem",
@@ -415,6 +417,7 @@ export const translations = {
       stat2: "קליניקה פרטית",
       stat3: "הוסמכה",
       stat3label: "בצרפת",
+      luxoCardDesc: "טכניקת אור אינפרא-אדום לא פולשנית לרווחה כוללת",
     },
     services: {
       badge: "מערכת טיפולים",
@@ -610,6 +613,7 @@ export const translations = {
       stat2: "Частная клиника",
       stat3: "Обучение",
       stat3label: "Во Франции",
+      luxoCardDesc: "Неинвазивная техника инфракрасного света для комплексного благополучия",
     },
     services: {
       badge: "Экосистема лечения",
@@ -787,8 +791,15 @@ export const translations = {
 
 export function LanguageProvider({ children }) {
   const [lang, setLang] = useState("fr");
+  const isRTL = lang === "he";
+
+  React.useEffect(() => {
+    document.documentElement.dir = isRTL ? "rtl" : "ltr";
+    document.documentElement.lang = lang;
+  }, [lang, isRTL]);
+
   return (
-    <LanguageContext.Provider value={{ lang, setLang, t: translations[lang] }}>
+    <LanguageContext.Provider value={{ lang, setLang, t: translations[lang], isRTL }}>
       {children}
     </LanguageContext.Provider>
   );

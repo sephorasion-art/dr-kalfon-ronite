@@ -2,11 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { ArrowRight, Award } from "lucide-react";
+import { ArrowRight, ArrowLeft, Award } from "lucide-react";
 import { useLang } from "@/lib/LanguageContext";
 
 export default function HeroSection() {
-  const { t } = useLang();
+  const { t, isRTL } = useLang();
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
       {/* Background gradient */}
@@ -39,7 +39,7 @@ export default function HeroSection() {
               <Link to="/contact">
                 <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-8 gap-2 text-base h-14">
                   {t.hero.cta}
-                  <ArrowRight className="w-4 h-4" />
+                  {isRTL ? <ArrowLeft className="w-4 h-4" /> : <ArrowRight className="w-4 h-4" />}
                 </Button>
               </Link>
               <Link to="/services">
@@ -107,7 +107,7 @@ export default function HeroSection() {
                 <span className="text-sm font-semibold text-foreground">Luxopuncture</span>
               </div>
               <p className="text-xs text-muted-foreground leading-relaxed">
-                Technique de lumière infrarouge non invasive pour le bien-être global
+                {t.hero.luxoCardDesc}
               </p>
             </motion.div>
           </motion.div>
