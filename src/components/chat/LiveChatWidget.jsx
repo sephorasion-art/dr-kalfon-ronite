@@ -4,12 +4,15 @@ import { MessageCircle, X, Send, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { base44 } from "@/api/base44Client";
+import { useLang } from "@/lib/LanguageContext";
 
 function generateConversationId() {
   return "conv_" + Date.now() + "_" + Math.random().toString(36).substr(2, 9);
 }
 
 export default function LiveChatWidget() {
+  const { t, isRTL } = useLang();
+  const tc = t.chat;
   const [open, setOpen] = useState(false);
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState("");
@@ -51,7 +54,7 @@ export default function LiveChatWidget() {
     // Send welcome
     await base44.entities.ChatMessage.create({
       sender_name: "Clinique Dr. Kalfon",
-      message: `Bonjour ${name} ! Bienvenue. Comment pouvons-nous vous aider aujourd'hui ?`,
+      message: tc.welcome(name),
       sender_type: "admin",
       conversation_id: conversationId,
     });
@@ -108,8 +111,8 @@ export default function LiveChatWidget() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
             transition={{ duration: 0.3 }}
-            className="fixed bottom-6 right-6 z-50 w-[380px] max-w-[calc(100vw-48px)] bg-card rounded-2xl shadow-2xl border border-border overflow-hidden flex flex-col"
-            style={{ height: "520px" }}
+            className="fixed bottom-6 right-6 z-50 w-[440px] max-w-[calc(100vw-32px)] bg-card rounded-2xl shadow-2xl border border-border overflow-hidden flex flex-col"
+            style={{ height: "620px" }}
           >
             {/* Header */}
             <div className="bg-primary text-primary-foreground px-6 py-4 flex items-center justify-between shrink-0">
@@ -118,10 +121,10 @@ export default function LiveChatWidget() {
                   <User className="w-5 h-5" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-sm">Concierge Clinique</h3>
+                  <h3 className="font-semibold text-sm">{tc.title}</h3>
                   <div className="flex items-center gap-1.5">
                     <div className="w-2 h-2 rounded-full bg-green-400" />
-                    <span className="text-xs opacity-80">En ligne</span>
+                    <span className="text-xs opacity-80">{tc.online}</span>
                   </div>
                 </div>
               </div>
@@ -136,26 +139,26 @@ export default function LiveChatWidget() {
                 <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4">
                   <MessageCircle className="w-8 h-8 text-primary" />
                 </div>
-                <h4 className="font-semibold text-foreground text-lg mb-2">Chat Direct</h4>
+                <h4 className="font-semibold text-foreground text-lg mb-2">{tc.heading}</h4>
                 <p className="text-sm text-muted-foreground text-center mb-6">
-                  Posez vos questions, nous vous répondrons rapidement.
+                  {tc.intro}
                 </p>
                 <form onSubmit={handleStart} className="w-full space-y-3">
                   <Input
-                    placeholder="Votre nom"
+                    placeholder={tc.namePlaceholder}
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     required
                   />
                   <Input
                     type="email"
-                    placeholder="Votre email"
+                    placeholder={tc.emailPlaceholder}
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required
                   />
                   <Button type="submit" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground rounded-lg">
-                    Démarrer la conversation
+                    {tc.start}
                   </Button>
                 </form>
               </div>
@@ -189,7 +192,7 @@ export default function LiveChatWidget() {
                       ref={inputRef}
                       value={input}
                       onChange={(e) => setInput(e.target.value)}
-                      placeholder="Tapez votre message..."
+                      placeholder={tc.inputPlaceholder}
                       className="flex-1"
                       disabled={sending}
                     />
