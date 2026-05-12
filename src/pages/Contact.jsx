@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { useLang } from "@/lib/LanguageContext";
 import { Button } from "@/components/ui/button";
+
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
@@ -18,18 +19,9 @@ import {
 } from "lucide-react";
 import { toast } from "sonner";
 
-const serviceOptions = [
-  { value: "nutrition", label: "Nutrition & Suivi Diététique" },
-  { value: "luxopuncture_weight", label: "Luxopuncture — Perte de Poids" },
-  { value: "luxopuncture_smoking", label: "Luxopuncture — Arrêt du Tabac" },
-  { value: "luxopuncture_addiction", label: "Luxopuncture — Addictions" },
-  { value: "luxopuncture_sleep", label: "Luxopuncture — Sommeil" },
-  { value: "luxopuncture_relaxation", label: "Luxopuncture — Relaxation" },
-  { value: "luxopuncture_rejuvenation", label: "Luxopuncture — Rajeunissement Facial" },
-];
-
 export default function Contact() {
-  const { t } = useLang();
+  const { t, lang, isRTL } = useLang();
+  const serviceOptions = t.contact.serviceOptions;
   const [form, setForm] = useState({
     full_name: "",
     email: "",
@@ -194,6 +186,7 @@ export default function Contact() {
                       <Label>{t.contact.date}</Label>
                       <Input
                         type="date"
+                        lang={lang}
                         value={form.preferred_date}
                         onChange={(e) => setForm({ ...form, preferred_date: e.target.value })}
                       />

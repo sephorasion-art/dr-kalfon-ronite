@@ -76,6 +76,15 @@ export const translations = {
       btn: "Prendre Rendez-vous",
     },
     contact: {
+      serviceOptions: [
+        { value: "nutrition", label: "Nutrition & Suivi Diététique" },
+        { value: "luxopuncture_weight", label: "Luxopuncture — Perte de Poids" },
+        { value: "luxopuncture_smoking", label: "Luxopuncture — Arrêt du Tabac" },
+        { value: "luxopuncture_addiction", label: "Luxopuncture — Addictions" },
+        { value: "luxopuncture_sleep", label: "Luxopuncture — Sommeil" },
+        { value: "luxopuncture_relaxation", label: "Luxopuncture — Relaxation" },
+        { value: "luxopuncture_rejuvenation", label: "Luxopuncture — Rajeunissement Facial" },
+      ],
       label: "Contact",
       title: "Prenez Rendez-vous",
       pageSubtitle: "Contactez-nous pour planifier votre première consultation ou pour toute question sur nos services.",
@@ -282,6 +291,15 @@ export const translations = {
       btn: "Book an Appointment",
     },
     contact: {
+      serviceOptions: [
+        { value: "nutrition", label: "Nutrition & Dietary Follow-up" },
+        { value: "luxopuncture_weight", label: "Luxopuncture — Weight Loss" },
+        { value: "luxopuncture_smoking", label: "Luxopuncture — Stop Smoking" },
+        { value: "luxopuncture_addiction", label: "Luxopuncture — Addictions" },
+        { value: "luxopuncture_sleep", label: "Luxopuncture — Sleep" },
+        { value: "luxopuncture_relaxation", label: "Luxopuncture — Relaxation" },
+        { value: "luxopuncture_rejuvenation", label: "Luxopuncture — Facial Rejuvenation" },
+      ],
       label: "Contact",
       title: "Book an Appointment",
       pageSubtitle: "Contact us to schedule your first consultation or for any questions about our services.",
@@ -488,6 +506,15 @@ export const translations = {
       btn: "קביעת תור",
     },
     contact: {
+      serviceOptions: [
+        { value: "nutrition", label: "תזונה וליווי תזונתי" },
+        { value: "luxopuncture_weight", label: "לוקסופונקטורה — ירידה במשקל" },
+        { value: "luxopuncture_smoking", label: "לוקסופונקטורה — גמילה מעישון" },
+        { value: "luxopuncture_addiction", label: "לוקסופונקטורה — התמכרויות" },
+        { value: "luxopuncture_sleep", label: "לוקסופונקטורה — שינה" },
+        { value: "luxopuncture_relaxation", label: "לוקסופונקטורה — רלקסציה" },
+        { value: "luxopuncture_rejuvenation", label: "לוקסופונקטורה — התחדשות פנים" },
+      ],
       label: "צור קשר",
       title: "קביעת תור",
       pageSubtitle: "צרו קשר לתיאום הייעוץ הראשון שלכם או לכל שאלה על השירותים שלנו.",
@@ -694,6 +721,15 @@ export const translations = {
       btn: "Записаться на приём",
     },
     contact: {
+      serviceOptions: [
+        { value: "nutrition", label: "Питание и диетическое наблюдение" },
+        { value: "luxopuncture_weight", label: "Люксопунктура — Снижение веса" },
+        { value: "luxopuncture_smoking", label: "Люксопунктура — Отказ от курения" },
+        { value: "luxopuncture_addiction", label: "Люксопунктура — Зависимости" },
+        { value: "luxopuncture_sleep", label: "Люксопунктура — Сон" },
+        { value: "luxopuncture_relaxation", label: "Люксопунктура — Расслабление" },
+        { value: "luxopuncture_rejuvenation", label: "Люксопунктура — Омоложение лица" },
+      ],
       label: "Контакты",
       title: "Запись на приём",
       pageSubtitle: "Свяжитесь с нами для записи на первую консультацию или по любым вопросам об услугах.",
