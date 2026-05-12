@@ -63,12 +63,12 @@ export default function HeroSection() {
             {/* Credentials */}
             <div className="flex items-center gap-8 mt-8 pt-8 border-t border-border/50">
               <div>
-                <div className="text-2xl font-bold text-foreground">15+</div>
+                <div className="text-2xl font-bold text-foreground">{isRTL ? "‎+15" : "15+"}</div>
                 <div className="text-xs text-muted-foreground uppercase tracking-wider">{t.hero.stat1}</div>
               </div>
               <div className="w-px h-10 bg-border" />
               <div>
-                <div className="text-2xl font-bold text-foreground">Tel Aviv</div>
+                <div className="text-2xl font-bold text-foreground">{isRTL ? "תל אביב" : "Tel Aviv"}</div>
                 <div className="text-xs text-muted-foreground uppercase tracking-wider">{t.hero.stat2}</div>
               </div>
               <div className="w-px h-10 bg-border" />
