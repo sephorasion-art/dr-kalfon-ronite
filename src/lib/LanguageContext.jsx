@@ -11,6 +11,7 @@ export const translations = {
       about: "À Propos",
       contact: "Contact",
       rdv: "Prendre RDV",
+      pricing: "Tarifs",
     },
     hero: {
       badge: "Docteur en Pharmacie",
@@ -237,6 +238,7 @@ export const translations = {
       about: "About",
       contact: "Contact",
       rdv: "Book Appointment",
+      pricing: "Pricing",
     },
     hero: {
       badge: "Doctor of Pharmacy",
@@ -463,6 +465,7 @@ export const translations = {
       about: "אודות",
       contact: "צור קשר",
       rdv: "קביעת תור",
+      pricing: "תמחור",
     },
     hero: {
       badge: "דוקטור לפרמקולוגיה",
@@ -689,6 +692,7 @@ export const translations = {
       about: "О нас",
       contact: "Контакты",
       rdv: "Записаться",
+      pricing: "Тарифы",
     },
     hero: {
       badge: "Доктор фармации",

@@ -14,6 +14,7 @@ import Luxopuncture from './pages/Luxopuncture';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import AdminChat from './pages/AdminChat';
+import Pricing from './pages/Pricing';
 
 const AuthenticatedApp = () => {
   const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
@@ -43,6 +44,7 @@ const AuthenticatedApp = () => {
         <Route path="/luxopuncture" element={<Luxopuncture />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/pricing" element={<Pricing />} />
       </Route>
       <Route path="/admin/chat" element={<AdminChat />} />
       <Route path="*" element={<PageNotFound />} />

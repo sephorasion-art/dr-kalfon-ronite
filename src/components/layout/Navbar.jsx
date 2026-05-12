@@ -17,6 +17,7 @@ export default function Navbar() {
     { label: t.nav.services, path: "/services" },
     { label: t.nav.luxopuncture, path: "/luxopuncture" },
     { label: t.nav.about, path: "/about" },
+    { label: t.nav.pricing, path: "/pricing" },
     { label: t.nav.contact, path: "/contact" },
   ];
 
