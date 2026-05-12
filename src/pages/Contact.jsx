@@ -260,7 +260,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <h4 className="font-medium text-foreground text-sm">{t.contact.phone}</h4>
-                      <p className="text-sm text-muted-foreground">+972 XX XXX XXXX</p>
+                      <p className="text-sm text-muted-foreground">054-996-3354</p>
                     </div>
                   </div>
                   <div className="flex gap-4">
