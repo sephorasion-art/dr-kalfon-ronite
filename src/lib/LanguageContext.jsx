@@ -121,7 +121,7 @@ export const translations = {
       chatAvailable: "Disponible maintenant",
     },
     chat: {
-      title: "Concierge Clinique",
+      title: "Assistant Virtuel",
       online: "En ligne",
       heading: "Chat Direct",
       intro: "Posez vos questions, nous vous répondrons rapidement.",
@@ -347,7 +347,7 @@ export const translations = {
       chatAvailable: "Available now",
     },
     chat: {
-      title: "Clinic Concierge",
+      title: "Virtual Assistant",
       online: "Online",
       heading: "Live Chat",
       intro: "Ask your questions, we'll reply quickly.",
@@ -573,7 +573,7 @@ export const translations = {
       chatAvailable: "זמין עכשיו",
     },
     chat: {
-      title: "קונסיירז' קליניקה",
+      title: "עוזר וירטואלי",
       online: "מקוון",
       heading: "צ'אט ישיר",
       intro: "שאלו את שאלותיכם, נענה במהירות.",
@@ -799,7 +799,7 @@ export const translations = {
       chatAvailable: "Доступен сейчас",
     },
     chat: {
-      title: "Консьерж клиники",
+      title: "Виртуальный ассистент",
       online: "Онлайн",
       heading: "Онлайн-чат",
       intro: "Задайте ваши вопросы, мы ответим быстро.",
