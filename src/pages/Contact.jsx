@@ -269,7 +269,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <h4 className="font-medium text-foreground text-sm">{t.contact.email}</h4>
-                      <p className="text-sm text-muted-foreground">contact@drkalfon.com</p>
+                      <p className="text-sm text-muted-foreground">drronitkalfon@gmail.com</p>
                     </div>
                   </div>
                   <div className="flex gap-4">
