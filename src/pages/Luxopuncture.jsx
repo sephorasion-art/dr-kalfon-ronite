@@ -11,18 +11,18 @@ function FaqItem({ q, a }) {
     <div className="border border-border rounded-xl overflow-hidden">
       <button
         onClick={() => setOpen(!open)}
-        className="w-full flex items-center justify-between p-5 text-left hover:bg-secondary/50 transition-colors"
-      >
+        className="w-full flex items-center justify-between p-5 text-left hover:bg-secondary/50 transition-colors">
+        
         <span className="font-medium text-foreground pr-4">{q}</span>
         <ChevronDown className={`w-5 h-5 text-primary shrink-0 transition-transform duration-300 ${open ? "rotate-180" : ""}`} />
       </button>
-      {open && (
-        <div className="px-5 pb-5 text-sm text-muted-foreground leading-relaxed border-t border-border pt-4">
+      {open &&
+      <div className="px-5 pb-5 text-sm text-muted-foreground leading-relaxed border-t border-border pt-4">
           {a}
         </div>
-      )}
-    </div>
-  );
+      }
+    </div>);
+
 }
 
 export default function Luxopuncture() {
@@ -30,31 +30,31 @@ export default function Luxopuncture() {
   const lx = t.luxo;
 
   const hormones = [
-    { name: lx.h1name, subtitle: lx.h1sub, color: "bg-primary/10 text-primary border-primary/20", dot: "bg-primary", description: lx.h1desc },
-    { name: lx.h2name, subtitle: lx.h2sub, color: "bg-accent/10 text-accent border-accent/20", dot: "bg-accent", description: lx.h2desc },
-    { name: lx.h3name, subtitle: lx.h3sub, color: "bg-primary/10 text-primary border-primary/20", dot: "bg-primary", description: lx.h3desc },
-    { name: lx.h4name, subtitle: lx.h4sub, color: "bg-accent/10 text-accent border-accent/20", dot: "bg-accent", description: lx.h4desc },
-  ];
+  { name: lx.h1name, subtitle: lx.h1sub, color: "bg-primary/10 text-primary border-primary/20", dot: "bg-primary", description: lx.h1desc },
+  { name: lx.h2name, subtitle: lx.h2sub, color: "bg-accent/10 text-accent border-accent/20", dot: "bg-accent", description: lx.h2desc },
+  { name: lx.h3name, subtitle: lx.h3sub, color: "bg-primary/10 text-primary border-primary/20", dot: "bg-primary", description: lx.h3desc },
+  { name: lx.h4name, subtitle: lx.h4sub, color: "bg-accent/10 text-accent border-accent/20", dot: "bg-accent", description: lx.h4desc }];
+
 
   const benefits = [
-    { icon: Zap, title: lx.b1title, desc: lx.b1desc },
-    { icon: ShieldCheck, title: lx.b2title, desc: lx.b2desc },
-    { icon: Clock, title: lx.b3title, desc: lx.b3desc },
-    { icon: Sparkles, title: lx.b4title, desc: lx.b4desc },
-    { icon: Heart, title: lx.b5title, desc: lx.b5desc },
-    { icon: Brain, title: lx.b6title, desc: lx.b6desc },
-  ];
+  { icon: Zap, title: lx.b1title, desc: lx.b1desc },
+  { icon: ShieldCheck, title: lx.b2title, desc: lx.b2desc },
+  { icon: Clock, title: lx.b3title, desc: lx.b3desc },
+  { icon: Sparkles, title: lx.b4title, desc: lx.b4desc },
+  { icon: Heart, title: lx.b5title, desc: lx.b5desc },
+  { icon: Brain, title: lx.b6title, desc: lx.b6desc }];
+
 
   const indications = [lx.i1, lx.i2, lx.i3, lx.i4, lx.i5, lx.i6, lx.i7, lx.i8];
 
   const faqs = [
-    { q: lx.faq1q, a: lx.faq1a },
-    { q: lx.faq2q, a: lx.faq2a },
-    { q: lx.faq3q, a: lx.faq3a },
-    { q: lx.faq4q, a: lx.faq4a },
-    { q: lx.faq5q, a: lx.faq5a },
-    { q: lx.faq6q, a: lx.faq6a },
-  ];
+  { q: lx.faq1q, a: lx.faq1a },
+  { q: lx.faq2q, a: lx.faq2a },
+  { q: lx.faq3q, a: lx.faq3a },
+  { q: lx.faq4q, a: lx.faq4a },
+  { q: lx.faq5q, a: lx.faq5a },
+  { q: lx.faq6q, a: lx.faq6a }];
+
 
   return (
     <div className="pt-20">
@@ -67,8 +67,8 @@ export default function Luxopuncture() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-center max-w-3xl mx-auto mb-12"
-          >
+            className="text-center max-w-3xl mx-auto mb-12">
+            
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 text-accent text-sm font-medium mb-6">
               <div className="w-2 h-2 rounded-full bg-accent" />
               {lx.heroBadge}
@@ -88,13 +88,13 @@ export default function Luxopuncture() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="rounded-3xl overflow-hidden shadow-2xl"
-          >
+            className="rounded-3xl overflow-hidden shadow-2xl">
+            
             <img
               src="https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/c9fd66fe7_6.jpg"
               alt="Luxopuncture Luxomed banner"
-              className="w-full object-cover max-h-[320px]"
-            />
+              className="w-full object-cover max-h-[320px] hidden" />
+            
           </motion.div>
         </div>
       </section>
@@ -108,16 +108,16 @@ export default function Luxopuncture() {
                 <img
                   src="https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/b21167ef3_BELUXO-FOND-BLANC-copie.jpg"
                   alt="Appareil Beluxo de Luxopuncture®"
-                  className="w-full max-h-[320px] object-contain drop-shadow-xl"
-                />
+                  className="w-full max-h-[320px] object-contain drop-shadow-xl" />
+                
               </div>
               {/* Appareil sur bras */}
               <div className="rounded-2xl overflow-hidden shadow-lg">
                 <img
                   src="https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/7c9ba056a_9.jpg"
                   alt="Séance Luxopuncture sur le bras"
-                  className="w-full h-48 object-cover"
-                />
+                  className="w-full h-48 object-cover hidden" />
+                
               </div>
             </motion.div>
 
@@ -140,13 +140,13 @@ export default function Luxopuncture() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mt-16 rounded-3xl overflow-hidden shadow-xl"
-          >
+            className="mt-16 rounded-3xl overflow-hidden shadow-xl">
+            
             <img
               src="https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/ed4212b99_7.jpg"
               alt="Comparaison Luxopuncture vs Acupuncture"
-              className="w-full object-cover max-h-[280px]"
-            />
+              className="w-full object-cover max-h-[280px] hidden" />
+            
           </motion.div>
         </div>
       </section>
@@ -164,8 +164,8 @@ export default function Luxopuncture() {
           </motion.div>
 
           <div className="grid md:grid-cols-2 gap-6">
-            {hormones.map((h, i) => (
-              <motion.div key={h.name} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} className={`rounded-2xl border p-6 ${h.color}`}>
+            {hormones.map((h, i) =>
+            <motion.div key={h.name} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} className={`rounded-2xl border p-6 ${h.color}`}>
                 <div className="flex items-center gap-3 mb-3">
                   <div className={`w-3 h-3 rounded-full ${h.dot}`} />
                   <div>
@@ -175,7 +175,7 @@ export default function Luxopuncture() {
                 </div>
                 <p className="text-sm leading-relaxed opacity-90">{h.description}</p>
               </motion.div>
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -187,15 +187,15 @@ export default function Luxopuncture() {
             <h2 className="text-3xl font-bold text-foreground mb-4">{lx.benefitsTitle}</h2>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((item, i) => (
-              <motion.div key={item.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.08 }} className="bg-card rounded-2xl p-6 border border-border/50 hover:shadow-md transition-shadow">
+            {benefits.map((item, i) =>
+            <motion.div key={item.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.08 }} className="bg-card rounded-2xl p-6 border border-border/50 hover:shadow-md transition-shadow">
                 <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
                   <item.icon className="w-6 h-6 text-primary" />
                 </div>
                 <h3 className="font-semibold text-foreground mb-2">{item.title}</h3>
                 <p className="text-sm text-muted-foreground">{item.desc}</p>
               </motion.div>
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -211,32 +211,32 @@ export default function Luxopuncture() {
           {/* Visual gallery */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
             {[
-              { src: "https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/7c9ba056a_9.jpg", alt: "Luxopuncture séance" },
-              { src: "https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/935d63a73_4.jpg", alt: "Luxopuncture homme relaxation tabac perte de poids" },
-              { src: "https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/81972bdde_3.jpg", alt: "Luxopuncture traitement facial esthétique" },
-              { src: "https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/347db5f2d_5.jpg", alt: "Luxopuncture arrêt du tabac" },
-            ].map((img, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.08 }}
-                className="rounded-2xl overflow-hidden shadow-md aspect-square"
-              >
+            { src: "https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/7c9ba056a_9.jpg", alt: "Luxopuncture séance" },
+            { src: "https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/935d63a73_4.jpg", alt: "Luxopuncture homme relaxation tabac perte de poids" },
+            { src: "https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/81972bdde_3.jpg", alt: "Luxopuncture traitement facial esthétique" },
+            { src: "https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/347db5f2d_5.jpg", alt: "Luxopuncture arrêt du tabac" }].
+            map((img, i) =>
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.08 }}
+              className="rounded-2xl overflow-hidden shadow-md aspect-square">
+              
                 <img src={img.src} alt={img.alt} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
               </motion.div>
-            ))}
+            )}
           </div>
 
           <div className="max-w-4xl mx-auto">
             <div className="grid md:grid-cols-2 gap-4">
-              {indications.map((item, i) => (
-                <div key={i} className="flex items-start gap-3 bg-card rounded-xl p-4 border border-border/50">
+              {indications.map((item, i) =>
+              <div key={i} className="flex items-start gap-3 bg-card rounded-xl p-4 border border-border/50">
                   <div className="precision-dot mt-2 shrink-0" />
                   <span className="text-foreground text-sm">{item}</span>
                 </div>
-              ))}
+              )}
             </div>
           </div>
         </div>
@@ -247,21 +247,21 @@ export default function Luxopuncture() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
-              { src: "https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/09f6e214d_2.jpg", alt: "Luxopuncture — La thérapie douce qui stimule vos énergies" },
-              { src: "https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/c2f0a5b6d_8.jpg", alt: "Luxopuncture — Esthétique Perte de poids Ménopause Relaxation" },
-              { src: "https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/347db5f2d_5.jpg", alt: "Luxopuncture — Arrêt du tabac" },
-            ].map((img, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="rounded-2xl overflow-hidden shadow-lg"
-              >
+            { src: "https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/09f6e214d_2.jpg", alt: "Luxopuncture — La thérapie douce qui stimule vos énergies" },
+            { src: "https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/c2f0a5b6d_8.jpg", alt: "Luxopuncture — Esthétique Perte de poids Ménopause Relaxation" },
+            { src: "https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/347db5f2d_5.jpg", alt: "Luxopuncture — Arrêt du tabac" }].
+            map((img, i) =>
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.1 }}
+              className="rounded-2xl overflow-hidden shadow-lg">
+              
                 <img src={img.src} alt={img.alt} className="w-full object-cover hover:scale-105 transition-transform duration-500" />
               </motion.div>
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -277,9 +277,9 @@ export default function Luxopuncture() {
             <h2 className="text-3xl font-bold text-foreground">{lx.faqTitle}</h2>
           </div>
           <div className="space-y-3">
-            {faqs.map((faq, i) => (
-              <FaqItem key={i} q={faq.q} a={faq.a} />
-            ))}
+            {faqs.map((faq, i) =>
+            <FaqItem key={i} q={faq.q} a={faq.a} />
+            )}
           </div>
         </div>
       </section>
@@ -297,6 +297,6 @@ export default function Luxopuncture() {
           </Link>
         </div>
       </section>
-    </div>
-  );
+    </div>);
+
 }
