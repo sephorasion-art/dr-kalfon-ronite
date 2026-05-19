@@ -90,10 +90,10 @@ export default function Luxopuncture() {
             transition={{ delay: 0.2 }}
             className="rounded-3xl overflow-hidden shadow-2xl">
             
-            <img
-              src="https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/c9fd66fe7_6.jpg"
-              alt="Luxopuncture Luxomed banner"
-              className="w-full object-cover max-h-[320px] hidden" />
+            
+
+
+            
             
           </motion.div>
         </div>
@@ -113,10 +113,10 @@ export default function Luxopuncture() {
               </div>
               {/* Appareil sur bras */}
               <div className="rounded-2xl overflow-hidden shadow-lg">
-                <img
-                  src="https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/7c9ba056a_9.jpg"
-                  alt="Séance Luxopuncture sur le bras"
-                  className="w-full h-48 object-cover hidden" />
+                
+
+
+                
                 
               </div>
             </motion.div>
@@ -142,10 +142,10 @@ export default function Luxopuncture() {
             viewport={{ once: true }}
             className="mt-16 rounded-3xl overflow-hidden shadow-xl">
             
-            <img
-              src="https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/ed4212b99_7.jpg"
-              alt="Comparaison Luxopuncture vs Acupuncture"
-              className="w-full object-cover max-h-[280px] hidden" />
+            
+
+
+            
             
           </motion.div>
         </div>
