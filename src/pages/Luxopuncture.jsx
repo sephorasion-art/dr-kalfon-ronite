@@ -67,7 +67,7 @@ export default function Luxopuncture() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-center max-w-3xl mx-auto"
+            className="text-center max-w-3xl mx-auto mb-12"
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 text-accent text-sm font-medium mb-6">
               <div className="w-2 h-2 rounded-full bg-accent" />
@@ -82,6 +82,20 @@ export default function Luxopuncture() {
               {lx.heroDesc}
             </p>
           </motion.div>
+
+          {/* Hero banner image */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+            className="rounded-3xl overflow-hidden shadow-2xl"
+          >
+            <img
+              src="https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/c9fd66fe7_6.jpg"
+              alt="Luxopuncture Luxomed banner"
+              className="w-full object-cover max-h-[320px]"
+            />
+          </motion.div>
         </div>
       </section>
 
@@ -89,12 +103,20 @@ export default function Luxopuncture() {
       <section className="py-20 bg-secondary/30">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
+            <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="space-y-4">
               <div className="rounded-3xl overflow-hidden bg-white shadow-xl flex items-center justify-center p-8">
                 <img
                   src="https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/b21167ef3_BELUXO-FOND-BLANC-copie.jpg"
                   alt="Appareil Beluxo de Luxopuncture®"
-                  className="w-full max-h-[380px] object-contain drop-shadow-xl"
+                  className="w-full max-h-[320px] object-contain drop-shadow-xl"
+                />
+              </div>
+              {/* Appareil sur bras */}
+              <div className="rounded-2xl overflow-hidden shadow-lg">
+                <img
+                  src="https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/7c9ba056a_9.jpg"
+                  alt="Séance Luxopuncture sur le bras"
+                  className="w-full h-48 object-cover"
                 />
               </div>
             </motion.div>
@@ -112,6 +134,20 @@ export default function Luxopuncture() {
               </div>
             </motion.div>
           </div>
+
+          {/* Comparaison infrarouge vs acupuncture */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mt-16 rounded-3xl overflow-hidden shadow-xl"
+          >
+            <img
+              src="https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/ed4212b99_7.jpg"
+              alt="Comparaison Luxopuncture vs Acupuncture"
+              className="w-full object-cover max-h-[280px]"
+            />
+          </motion.div>
         </div>
       </section>
 
@@ -166,17 +202,65 @@ export default function Luxopuncture() {
 
       {/* Indications */}
       <section className="py-20">
-        <div className="max-w-4xl mx-auto px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-foreground mb-4">{lx.indicationsTitle}</h2>
             <p className="text-muted-foreground">{lx.indicationsDesc}</p>
           </div>
-          <div className="grid md:grid-cols-2 gap-4">
-            {indications.map((item, i) => (
-              <div key={i} className="flex items-start gap-3 bg-card rounded-xl p-4 border border-border/50">
-                <div className="precision-dot mt-2 shrink-0" />
-                <span className="text-foreground text-sm">{item}</span>
-              </div>
+
+          {/* Visual gallery */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+            {[
+              { src: "https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/7c9ba056a_9.jpg", alt: "Luxopuncture séance" },
+              { src: "https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/935d63a73_4.jpg", alt: "Luxopuncture homme relaxation tabac perte de poids" },
+              { src: "https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/81972bdde_3.jpg", alt: "Luxopuncture traitement facial esthétique" },
+              { src: "https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/347db5f2d_5.jpg", alt: "Luxopuncture arrêt du tabac" },
+            ].map((img, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.08 }}
+                className="rounded-2xl overflow-hidden shadow-md aspect-square"
+              >
+                <img src={img.src} alt={img.alt} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+              </motion.div>
+            ))}
+          </div>
+
+          <div className="max-w-4xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-4">
+              {indications.map((item, i) => (
+                <div key={i} className="flex items-start gap-3 bg-card rounded-xl p-4 border border-border/50">
+                  <div className="precision-dot mt-2 shrink-0" />
+                  <span className="text-foreground text-sm">{item}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Affiches Luxomed */}
+      <section className="py-16 bg-secondary/30">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {[
+              { src: "https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/09f6e214d_2.jpg", alt: "Luxopuncture — La thérapie douce qui stimule vos énergies" },
+              { src: "https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/c2f0a5b6d_8.jpg", alt: "Luxopuncture — Esthétique Perte de poids Ménopause Relaxation" },
+              { src: "https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/347db5f2d_5.jpg", alt: "Luxopuncture — Arrêt du tabac" },
+            ].map((img, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="rounded-2xl overflow-hidden shadow-lg"
+              >
+                <img src={img.src} alt={img.alt} className="w-full object-cover hover:scale-105 transition-transform duration-500" />
+              </motion.div>
             ))}
           </div>
         </div>
