@@ -3,13 +3,14 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import {
-  Apple, Weight, Cigarette, Moon, Sparkles, Brain, ArrowRight, ArrowLeft, CheckCircle2
+  Apple, Weight, Cigarette, Moon, Sparkles, Brain, Flower2, ArrowRight, ArrowLeft, CheckCircle2
 } from "lucide-react";
 import { useLang } from "@/lib/LanguageContext";
 
-const icons = [Apple, Weight, Cigarette, Moon, Sparkles, Brain];
+const icons = [Apple, Weight, Cigarette, Moon, Sparkles, Brain, Flower2];
 const images = [
   "https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/47c7a5246_generated_71578a0c.png",
+  "https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/71d0c3c8c_generated_5b4d0f78.png",
   "https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/71d0c3c8c_generated_5b4d0f78.png",
   "https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/71d0c3c8c_generated_5b4d0f78.png",
   "https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/71d0c3c8c_generated_5b4d0f78.png",

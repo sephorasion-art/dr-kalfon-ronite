@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Apple, Cigarette, Moon, Sparkles, Weight, Brain, ArrowRight, ArrowLeft } from "lucide-react";
+import { Apple, Cigarette, Moon, Sparkles, Weight, Brain, Flower2, ArrowRight, ArrowLeft } from "lucide-react";
 import { useLang } from "@/lib/LanguageContext";
 
 export default function ServicesPreview() {
@@ -14,6 +14,7 @@ export default function ServicesPreview() {
     { icon: Moon, title: t.servicesPreview.s4title, description: t.servicesPreview.s4desc, note: t.servicesPreview.s4note, color: "text-accent", bg: "bg-accent/10" },
     { icon: Sparkles, title: t.servicesPreview.s5title, description: t.servicesPreview.s5desc, note: t.servicesPreview.s5note, color: "text-primary", bg: "bg-primary/10" },
     { icon: Brain, title: t.servicesPreview.s6title, description: t.servicesPreview.s6desc, note: t.servicesPreview.s6note, color: "text-accent", bg: "bg-accent/10" },
+    { icon: Flower2, title: t.servicesPreview.s7title, description: t.servicesPreview.s7desc, note: t.servicesPreview.s7note, color: "text-primary", bg: "bg-primary/10" },
   ];
 
   return (
