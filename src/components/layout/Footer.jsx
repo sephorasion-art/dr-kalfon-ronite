@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Instagram, Facebook } from "lucide-react";
 import { useLang } from "@/lib/LanguageContext";
 
 export default function Footer() {
@@ -17,6 +17,26 @@ export default function Footer() {
             <p className="text-sm leading-relaxed text-white/60">
               {t.footer.bio}
             </p>
+            <div className="flex items-center gap-3 mt-6">
+              <a
+                href="https://www.instagram.com/drronitkalfon/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                className="w-9 h-9 rounded-full bg-white/10 hover:bg-primary flex items-center justify-center transition-colors"
+              >
+                <Instagram className="w-4 h-4 text-white" />
+              </a>
+              <a
+                href="https://www.facebook.com/profile.php?id=61563215403146"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+                className="w-9 h-9 rounded-full bg-white/10 hover:bg-primary flex items-center justify-center transition-colors"
+              >
+                <Facebook className="w-4 h-4 text-white" />
+              </a>
+            </div>
           </div>
 
           <div>
