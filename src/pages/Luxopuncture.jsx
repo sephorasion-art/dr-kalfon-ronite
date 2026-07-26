@@ -92,7 +92,7 @@ export default function Luxopuncture() {
             <img
               src="https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/907a66382_luxo1.jpg"
               alt="Luxopuncture® — la technique réflexe innovante"
-              className="w-full h-[400px] object-cover" />
+              className="w-full h-[320px] md:h-[520px] object-cover object-center" />
           </motion.div>
         </div>
       </section>
@@ -102,11 +102,11 @@ export default function Luxopuncture() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="space-y-4">
-              <div className="rounded-3xl overflow-hidden bg-white shadow-xl flex items-center justify-center p-8">
+              <div className="rounded-3xl overflow-hidden bg-white shadow-xl flex items-center justify-center p-10">
                 <img
                   src="https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/b6183404b_luxo2.jpeg"
                   alt="Appareil Luxoscreen de Luxopuncture®"
-                  className="w-full max-h-[320px] object-contain drop-shadow-xl" />
+                  className="w-full max-h-[360px] object-contain drop-shadow-xl" />
                 
               </div>
               {/* Appareil sur bras */}
@@ -114,7 +114,7 @@ export default function Luxopuncture() {
                 <img
                   src="https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/8c6814421_luxo4.jpg"
                   alt="Séance de Luxopuncture® — perte de poids"
-                  className="w-full h-[260px] object-cover" />
+                  className="w-full h-[300px] md:h-[360px] object-cover object-center" />
                 
 
 
@@ -146,7 +146,7 @@ export default function Luxopuncture() {
             <img
               src="https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/4e96c02c1_luxo3.jpeg"
               alt="Comparaison Luxomed vs Acupuncture"
-              className="w-full object-cover" />
+              className="w-full max-h-[480px] object-cover object-center" />
             </motion.div>
         </div>
       </section>
@@ -222,9 +222,9 @@ export default function Luxopuncture() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.08 }}
-              className="rounded-2xl overflow-hidden shadow-md aspect-square">
+              className="rounded-2xl overflow-hidden shadow-md aspect-square group">
               
-                <img src={img.src} alt={img.alt} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+                <img src={img.src} alt={img.alt} className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" />
               </motion.div>
             )}
           </div>
@@ -257,9 +257,9 @@ export default function Luxopuncture() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="rounded-2xl overflow-hidden shadow-lg">
+              className="rounded-2xl overflow-hidden shadow-lg aspect-[3/4] group">
               
-                <img src={img.src} alt={img.alt} className="w-full object-cover hover:scale-105 transition-transform duration-500" />
+                <img src={img.src} alt={img.alt} className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" />
               </motion.div>
             )}
           </div>
