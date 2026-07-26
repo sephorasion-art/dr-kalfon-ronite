@@ -91,7 +91,7 @@ export default function Services() {
 
               <div className={`${index % 2 === 1 ? "lg:order-1" : ""} relative`}>
                 <div className="rounded-3xl overflow-hidden shadow-lg">
-                  <img src={service.image} alt={service.title} className="w-full h-[350px] object-cover" />
+                  <img src="https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/c3e6e68aa_2_ronit.jpeg" alt={service.title} className="w-full h-[350px] object-cover" />
                 
                 </div>
               </div>
