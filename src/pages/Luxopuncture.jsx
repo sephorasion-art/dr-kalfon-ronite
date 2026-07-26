@@ -89,12 +89,10 @@ export default function Luxopuncture() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
             className="rounded-3xl overflow-hidden shadow-2xl">
-            
-            
-
-
-            
-            
+            <img
+              src="https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/907a66382_luxo1.jpg"
+              alt="Luxopuncture® — la technique réflexe innovante"
+              className="w-full h-[400px] object-cover" />
           </motion.div>
         </div>
       </section>
@@ -106,13 +104,17 @@ export default function Luxopuncture() {
             <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="space-y-4">
               <div className="rounded-3xl overflow-hidden bg-white shadow-xl flex items-center justify-center p-8">
                 <img
-                  src="https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/b21167ef3_BELUXO-FOND-BLANC-copie.jpg"
-                  alt="Appareil Beluxo de Luxopuncture®"
+                  src="https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/b6183404b_luxo2.jpeg"
+                  alt="Appareil Luxoscreen de Luxopuncture®"
                   className="w-full max-h-[320px] object-contain drop-shadow-xl" />
                 
               </div>
               {/* Appareil sur bras */}
               <div className="rounded-2xl overflow-hidden shadow-lg">
+                <img
+                  src="https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/8c6814421_luxo4.jpg"
+                  alt="Séance de Luxopuncture® — perte de poids"
+                  className="w-full h-[260px] object-cover" />
                 
 
 
@@ -141,13 +143,11 @@ export default function Luxopuncture() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="mt-16 rounded-3xl overflow-hidden shadow-xl">
-            
-            
-
-
-            
-            
-          </motion.div>
+            <img
+              src="https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/4e96c02c1_luxo3.jpeg"
+              alt="Comparaison Luxomed vs Acupuncture"
+              className="w-full object-cover" />
+            </motion.div>
         </div>
       </section>
 
@@ -211,10 +211,10 @@ export default function Luxopuncture() {
           {/* Visual gallery */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
             {[
-            { src: "https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/7c9ba056a_9.jpg", alt: "Luxopuncture séance" },
-            { src: "https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/935d63a73_4.jpg", alt: "Luxopuncture homme relaxation tabac perte de poids" },
-            { src: "https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/81972bdde_3.jpg", alt: "Luxopuncture traitement facial esthétique" },
-            { src: "https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/347db5f2d_5.jpg", alt: "Luxopuncture arrêt du tabac" }].
+            { src: "https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/2aeb03edd_luxo5.jpg", alt: "Stylet Luxopuncture®" },
+            { src: "https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/b6183404b_luxo2.jpeg", alt: "Appareil Luxoscreen" },
+            { src: "https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/8c6814421_luxo4.jpg", alt: "Séance de Luxopuncture®" },
+            { src: "https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/907a66382_luxo1.jpg", alt: "Luxopuncture® — technique réflexe" }].
             map((img, i) =>
             <motion.div
               key={i}
@@ -247,9 +247,9 @@ export default function Luxopuncture() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
-            { src: "https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/09f6e214d_2.jpg", alt: "Luxopuncture — La thérapie douce qui stimule vos énergies" },
-            { src: "https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/c2f0a5b6d_8.jpg", alt: "Luxopuncture — Esthétique Perte de poids Ménopause Relaxation" },
-            { src: "https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/347db5f2d_5.jpg", alt: "Luxopuncture — Arrêt du tabac" }].
+            { src: "https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/907a66382_luxo1.jpg", alt: "Luxopuncture® — La technique réflexe innovante" },
+            { src: "https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/4e96c02c1_luxo3.jpeg", alt: "Comparaison Luxomed vs Acupuncture" },
+            { src: "https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/2aeb03edd_luxo5.jpg", alt: "Stylet de Luxopuncture®" }].
             map((img, i) =>
             <motion.div
               key={i}
