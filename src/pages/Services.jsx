@@ -9,13 +9,13 @@ import { useLang } from "@/lib/LanguageContext";
 
 const icons = [Apple, Weight, Cigarette, Moon, Sparkles, Brain, Flower2];
 const images = [
-"https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/47c7a5246_generated_71578a0c.png",
-"https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/71d0c3c8c_generated_5b4d0f78.png",
-"https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/71d0c3c8c_generated_5b4d0f78.png",
-"https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/71d0c3c8c_generated_5b4d0f78.png",
-"https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/71d0c3c8c_generated_5b4d0f78.png",
-"https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/71d0c3c8c_generated_5b4d0f78.png",
-"https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/71d0c3c8c_generated_5b4d0f78.png"];
+"https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/3c414395a_ronit_expertise_nutri1.jpeg",
+"https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/c3e6e68aa_2_ronit.jpeg",
+"https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/4e024dad4_ronit_3.jpeg",
+"https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/1d4860309_ronit4.jpeg",
+"https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/b10707cdb_ronit5.jpeg",
+"https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/09ce79083_ronit_6.jpeg",
+"https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/4b9ed9b93_ronit7.jpeg"];
 
 
 export default function Services() {
