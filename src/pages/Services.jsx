@@ -3,20 +3,20 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import {
-  Apple, Weight, Cigarette, Moon, Sparkles, Brain, Flower2, ArrowRight, ArrowLeft, CheckCircle2
-} from "lucide-react";
+  Apple, Weight, Cigarette, Moon, Sparkles, Brain, Flower2, ArrowRight, ArrowLeft, CheckCircle2 } from
+"lucide-react";
 import { useLang } from "@/lib/LanguageContext";
 
 const icons = [Apple, Weight, Cigarette, Moon, Sparkles, Brain, Flower2];
 const images = [
-  "https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/47c7a5246_generated_71578a0c.png",
-  "https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/71d0c3c8c_generated_5b4d0f78.png",
-  "https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/71d0c3c8c_generated_5b4d0f78.png",
-  "https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/71d0c3c8c_generated_5b4d0f78.png",
-  "https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/71d0c3c8c_generated_5b4d0f78.png",
-  "https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/71d0c3c8c_generated_5b4d0f78.png",
-  "https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/71d0c3c8c_generated_5b4d0f78.png",
-];
+"https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/47c7a5246_generated_71578a0c.png",
+"https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/71d0c3c8c_generated_5b4d0f78.png",
+"https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/71d0c3c8c_generated_5b4d0f78.png",
+"https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/71d0c3c8c_generated_5b4d0f78.png",
+"https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/71d0c3c8c_generated_5b4d0f78.png",
+"https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/71d0c3c8c_generated_5b4d0f78.png",
+"https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/71d0c3c8c_generated_5b4d0f78.png"];
+
 
 export default function Services() {
   const { t, isRTL } = useLang();
@@ -30,8 +30,8 @@ export default function Services() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-center"
-          >
+            className="text-center">
+            
             <div className="inline-flex items-center gap-2 text-primary text-sm font-medium uppercase tracking-widest mb-4">
               <div className="precision-dot" />
               {t.services.pageLabel}
@@ -49,17 +49,17 @@ export default function Services() {
       {/* Services list */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 space-y-24">
-          {services.map((service, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className={`grid lg:grid-cols-2 gap-16 items-center ${
-                index % 2 === 1 ? "lg:direction-rtl" : ""
-              }`}
-            >
+          {services.map((service, index) =>
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className={`grid lg:grid-cols-2 gap-16 items-center ${
+            index % 2 === 1 ? "lg:direction-rtl" : ""}`
+            }>
+            
               <div className={index % 2 === 1 ? "lg:order-2" : ""}>
                 <div className="inline-flex items-center gap-3 mb-4">
                   <div className="p-2.5 rounded-xl bg-primary/10">
@@ -73,12 +73,12 @@ export default function Services() {
                 <p className="text-muted-foreground mb-8 leading-relaxed">{service.description}</p>
 
                 <div className="space-y-3 mb-8">
-                  {service.benefits.map((benefit) => (
-                    <div key={benefit} className="flex items-start gap-3">
+                  {service.benefits.map((benefit) =>
+                <div key={benefit} className="flex items-start gap-3">
                       <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                       <span className="text-sm text-foreground">{benefit}</span>
                     </div>
-                  ))}
+                )}
                 </div>
 
                 <Link to="/contact">
@@ -91,15 +91,15 @@ export default function Services() {
 
               <div className={`${index % 2 === 1 ? "lg:order-1" : ""} relative`}>
                 <div className="rounded-3xl overflow-hidden shadow-lg">
-                  <img
-                    src={service.image}
-                    alt={service.title}
-                    className="w-full h-[350px] object-cover"
-                  />
+                  <img src="https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/3c414395a_ronit_expertise_nutri1.jpeg"
+
+                alt={service.title}
+                className="w-full h-[350px] object-cover" />
+                
                 </div>
               </div>
             </motion.div>
-          ))}
+          )}
         </div>
       </section>
 
@@ -120,6 +120,6 @@ export default function Services() {
           </Link>
         </div>
       </section>
-    </div>
-  );
+    </div>);
+
 }
