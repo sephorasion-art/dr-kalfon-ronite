@@ -1,4 +1,8 @@
 import { createClientFromRequest } from 'npm:@base44/sdk@0.8.25';
+import { secrets } from 'base44:runtime';
+
+const NOTIFY_EMAIL = "drronitkalfon@gmail.com";
+const SENDER_EMAIL = "onboarding@resend.dev";
 
 Deno.serve(async (req) => {
   try {
@@ -43,6 +47,21 @@ ${appt.message ? `\n💬 Message : ${appt.message}` : ""}
 ---
 Cet email a été envoyé automatiquement depuis votre site.
     `.trim();
+
+    // Envoi via Resend vers l'adresse externe
+    await fetch("https://api.resend.com/emails", {
+      method: "POST",
+      headers: {
+        "Authorization": `Bearer ${secrets.get("RESEND_API_KEY")}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        from: SENDER_EMAIL,
+        to: NOTIFY_EMAIL,
+        subject: `Nouvelle demande de RDV — ${appt.full_name} (${serviceName})`,
+        text: body,
+      }),
+    });
 
     // Récupérer les admins pour leur envoyer la notification
     const admins = await base44.asServiceRole.entities.User.filter({ role: "admin" });
