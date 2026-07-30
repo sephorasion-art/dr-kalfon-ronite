@@ -37,10 +37,16 @@ export default function Contact() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setSubmitting(true);
-    await base44.entities.Appointment.create(form);
-    setSubmitting(false);
-    setSubmitted(true);
-    toast.success(t.contact.success);
+    try {
+      await base44.entities.Appointment.create(form);
+      await base44.functions.invoke("notifyNewAppointment", { data: form });
+      setSubmitted(true);
+      toast.success(t.contact.success);
+    } catch (err) {
+      toast.error(err?.response?.data?.error || "Une erreur est survenue");
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
