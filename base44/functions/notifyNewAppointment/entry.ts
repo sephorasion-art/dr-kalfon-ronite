@@ -49,7 +49,7 @@ Cet email a été envoyé automatiquement depuis votre site.
     `.trim();
 
     // Envoi via Resend vers l'adresse externe
-    await fetch("https://api.resend.com/emails", {
+    const resendRes = await fetch("https://api.resend.com/emails", {
       method: "POST",
       headers: {
         "Authorization": `Bearer ${secrets.get("RESEND_API_KEY")}`,
@@ -62,6 +62,11 @@ Cet email a été envoyé automatiquement depuis votre site.
         text: body,
       }),
     });
+
+    if (!resendRes.ok) {
+      const errText = await resendRes.text();
+      throw new Error(`Resend (${resendRes.status}): ${errText}`);
+    }
 
     // Récupérer les admins pour leur envoyer la notification
     const admins = await base44.asServiceRole.entities.User.filter({ role: "admin" });
