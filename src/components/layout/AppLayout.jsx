@@ -2,7 +2,6 @@ import React from "react";
 import { Outlet } from "react-router-dom";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
-import LiveChatWidget from "../chat/LiveChatWidget";
 
 export default function AppLayout() {
   return (
@@ -12,7 +11,6 @@ export default function AppLayout() {
         <Outlet />
       </main>
       <Footer />
-      <LiveChatWidget />
     </div>
   );
 }
