@@ -291,21 +291,7 @@ export default function Contact() {
                 </div>
               </motion.div>
 
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3 }}
-                className="bg-primary/5 rounded-2xl p-8 border border-primary/10"
-              >
-                <h3 className="font-semibold text-foreground mb-3">{t.contact.chatTitle}</h3>
-                <p className="text-sm text-muted-foreground mb-4">
-                  {t.contact.chatDesc}
-                </p>
-                <div className="flex items-center gap-2 text-sm text-primary font-medium">
-                  <div className="w-2 h-2 rounded-full bg-green-500" />
-                  {t.contact.chatAvailable}
-                </div>
-              </motion.div>
+
             </div>
           </div>
         </div>
