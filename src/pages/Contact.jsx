@@ -39,7 +39,9 @@ export default function Contact() {
     setSubmitting(true);
     try {
       await base44.entities.Appointment.create(form);
-      await base44.functions.invoke("notifyNewAppointment", { data: form });
+      // Lancement de la notification sans bloquer l'interface
+      base44.functions.invoke("notifyNewAppointment", { data: form }).catch(() => {});
+      setForm({ full_name: "", email: "", phone: "", consultation_type: "presentiel", service: "", preferred_date: "", message: "" });
       setSubmitted(true);
       toast.success(t.contact.success);
     } catch (err) {
