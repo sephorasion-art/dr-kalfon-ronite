@@ -36,6 +36,10 @@ export default function Contact() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (!form.service) {
+      toast.error(t.contact.serviceSelect);
+      return;
+    }
     setSubmitting(true);
     try {
       await base44.entities.Appointment.create(form);
@@ -204,7 +208,6 @@ export default function Contact() {
                   <div className="space-y-2">
                     <Label>{t.contact.service} *</Label>
                     <Select
-                      required
                       value={form.service}
                       onValueChange={(val) => setForm({ ...form, service: val })}
                     >
