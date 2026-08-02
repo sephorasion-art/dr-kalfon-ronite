@@ -36,6 +36,10 @@ export default function Contact() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (!form.full_name || !form.email || !form.phone) {
+      toast.error(t.contact.requiredFields || "Veuillez remplir tous les champs obligatoires");
+      return;
+    }
     if (!form.service) {
       toast.error(t.contact.serviceSelect);
       return;
@@ -166,7 +170,6 @@ export default function Contact() {
                     <div className="space-y-2">
                       <Label>{t.contact.name} *</Label>
                       <Input
-                        required
                         value={form.full_name}
                         onChange={(e) => setForm({ ...form, full_name: e.target.value })}
                         placeholder={t.contact.namePlaceholder}
@@ -176,7 +179,6 @@ export default function Contact() {
                       <Label>{t.contact.email} *</Label>
                       <Input
                         type="email"
-                        required
                         value={form.email}
                         onChange={(e) => setForm({ ...form, email: e.target.value })}
                         placeholder={t.contact.emailPlaceholder}
@@ -188,7 +190,6 @@ export default function Contact() {
                     <div className="space-y-2">
                       <Label>{t.contact.phone} *</Label>
                       <Input
-                        required
                         value={form.phone}
                         onChange={(e) => setForm({ ...form, phone: e.target.value })}
                         placeholder="+972..."
