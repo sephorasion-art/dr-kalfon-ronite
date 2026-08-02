@@ -46,14 +46,28 @@ export default function Contact() {
     }
     setSubmitting(true);
     try {
-      await base44.entities.Appointment.create(form);
+      const payload = { ...form };
+      if (!payload.preferred_date) delete payload.preferred_date;
+      if (!payload.message) delete payload.message;
+      await base44.entities.Appointment.create(payload);
       // Lancement de la notification sans bloquer l'interface
-      base44.functions.invoke("notifyNewAppointment", { data: form }).catch(() => {});
+      (async () => {
+        try {
+          await base44.functions.invoke("notifyNewAppointment", { data: form });
+        } catch (_) { /* notification non bloquante */ }
+      })();
       setForm({ full_name: "", email: "", phone: "", consultation_type: "presentiel", service: "", preferred_date: "", message: "" });
       setSubmitted(true);
       toast.success(t.contact.success);
     } catch (err) {
-      toast.error(err?.response?.data?.error || "Une erreur est survenue");
+      const errorMsg =
+        err?.response?.data?.error ||
+        err?.response?.data?.message ||
+        err?.data?.error ||
+        err?.data?.message ||
+        err?.message ||
+        "Une erreur est survenue";
+      toast.error(errorMsg);
     } finally {
       setSubmitting(false);
     }
