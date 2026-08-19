@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /admin
+
+Sitemap: https://dr-kalfon-ronite.vercel.app/sitemap.xml
