@@ -50,7 +50,7 @@ export default function About() {
                 <img
                   src="https://media.base44.com/images/public/69f8a347ad8a1d3127f83b88/b20127226_WhatsApp-Image-2025-03-21-at-164200.jpg"
                   alt="Dr. Ronit Kalfon"
-                  className="w-full h-[500px] object-cover"
+                  className="w-full h-[560px] sm:h-[650px] object-cover object-top"
                 />
               </div>
             </motion.div>
