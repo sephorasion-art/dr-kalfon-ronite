@@ -5,6 +5,7 @@ const LanguageContext = createContext();
 export const translations = {
   fr: {
     nav: {
+      testimonials: "Témoignages",
       home: "Accueil",
       services: "Services",
       luxopuncture: "Luxopuncture",
@@ -12,6 +13,18 @@ export const translations = {
       contact: "Contact",
       rdv: "Prendre RDV",
       pricing: "Tarifs",
+    },
+    testimonials: {
+      title: "Témoignages & Avis",
+      subtitle: "Les retours d’expérience de mes patients, repris de mon autre site.",
+      original: "Témoignages dans leur langue d’origine : français.",
+      all: "Tous",
+      weight: "Gestion du Poids",
+      pharma: "Conseil Pharma-Nutrition",
+      wellbeing: "Prévention & Bien-être",
+      count: "témoignage(s) affiché(s)",
+      filters: "Filtrer les témoignages",
+      cta: "Parlons de votre accompagnement",
     },
     hero: {
       badge: "Docteur en Pharmacie",
@@ -21,7 +34,7 @@ export const translations = {
       cta: "Prendre Rendez-vous",
       services: "Découvrir les Services",
       certified: "Docteur en pharmacie",
-      centre: "DUI hôpital Bichat Paris",
+      centre: "Nutrition et diététique TLV · Gestion du Poids · Conseil Pharma-Nutrition",
       stat1: "Ans d'expérience",
       stat2: "Clinique privée",
       stat3: "En France",
@@ -121,10 +134,10 @@ export const translations = {
     about: {
     label: "À propos",
     title: "Dr Ronit Kalfon",
-    subtitle: "Docteur en Pharmacie · DUI hôpital Bichat Paris · Luxopuncture",
+    subtitle: "Docteur en Pharmacie · Nutrition et diététique TLV · Gestion du Poids · Conseil Pharma-Nutrition · Luxopuncture",
     bio1: "Docteur en Pharmacie de formation, le Dr Ronit Kalfon a dédié sa carrière à l'articulation entre science pharmaceutique et équilibre métabolique. Son expertise unique en pharmacologie lui permet de concevoir des protocoles nutritionnels d'une précision clinique, intégrant les interactions biologiques et les besoins spécifiques de chaque patient.",
     bio2: "Installée au cœur de Tel Aviv, elle propose une approche globale rare et performante, alliant nutrition clinique, suivi diététique personnalisé et luxopuncture pour des résultats profonds et durables.",
-    bio3: "Docteur en Pharmacie – DUI hôpital Bichat Paris",
+    bio3: "Docteur en Pharmacie – Nutrition et diététique TLV · Gestion du Poids · Conseil Pharma-Nutrition",
     stat1: "Docteur en Pharmacie",
     stat2: "Ans d'Expérience",
     stat3: "Patients Accompagnés",
@@ -220,6 +233,7 @@ export const translations = {
   },
   en: {
     nav: {
+      testimonials: "Testimonials",
       home: "Home",
       services: "Services",
       luxopuncture: "Luxopuncture",
@@ -227,6 +241,18 @@ export const translations = {
       contact: "Contact",
       rdv: "Book Appointment",
       pricing: "Pricing",
+    },
+    testimonials: {
+      title: "Patient testimonials",
+      subtitle: "Patient experiences, shared from my other website.",
+      original: "Testimonials in their original language: French.",
+      all: "All",
+      weight: "Weight Management",
+      pharma: "Pharma-Nutrition Advice",
+      wellbeing: "Prevention & Well-being",
+      count: "testimonial(s) shown",
+      filters: "Filter testimonials",
+      cta: "Let’s discuss your care",
     },
     hero: {
       badge: "Doctor of Pharmacy",
@@ -435,6 +461,7 @@ export const translations = {
   },
   he: {
     nav: {
+      testimonials: "המלצות",
       home: "בית",
       services: "שירותים",
       luxopuncture: "לוקסופונקטורה",
@@ -442,6 +469,18 @@ export const translations = {
       contact: "צור קשר",
       rdv: "קביעת תור",
       pricing: "תמחור",
+    },
+    testimonials: {
+      title: "המלצות וחוות דעת",
+      subtitle: "חוויות המטופלים שלי, כפי שפורסמו באתר האחר שלי.",
+      original: "ההמלצות בשפת המקור שלהן: צרפתית.",
+      all: "הכול",
+      weight: "ניהול משקל",
+      pharma: "ייעוץ פארמה-תזונה",
+      wellbeing: "מניעה ורווחה",
+      count: "המלצות מוצגות",
+      filters: "סינון המלצות",
+      cta: "בואו נדבר על הליווי שלכם",
     },
     hero: {
       badge: "דוקטור לפרמקולוגיה",
@@ -650,6 +689,7 @@ export const translations = {
   },
   ru: {
     nav: {
+      testimonials: "Отзывы",
       home: "Главная",
       services: "Услуги",
       luxopuncture: "Люксопунктура",
@@ -657,6 +697,18 @@ export const translations = {
       contact: "Контакты",
       rdv: "Записаться",
       pricing: "Тарифы",
+    },
+    testimonials: {
+      title: "Отзывы пациентов",
+      subtitle: "Опыт моих пациентов, опубликованный на моём другом сайте.",
+      original: "Отзывы на языке оригинала: французском.",
+      all: "Все",
+      weight: "Управление весом",
+      pharma: "Фарма-нутриционное консультирование",
+      wellbeing: "Профилактика и благополучие",
+      count: "отзывов показано",
+      filters: "Фильтр отзывов",
+      cta: "Обсудим ваше сопровождение",
     },
     hero: {
       badge: "Доктор фармации",

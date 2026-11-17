@@ -18,6 +18,7 @@ export default function Navbar() {
     { label: t.nav.luxopuncture, path: "/luxopuncture" },
     { label: t.nav.about, path: "/about" },
     { label: t.nav.pricing, path: "/pricing" },
+    { label: t.nav.testimonials, path: "/temoignages" },
     { label: t.nav.contact, path: "/contact" },
   ];
 
@@ -51,7 +52,7 @@ export default function Navbar() {
             </div>
           </Link>
 
-          <div className={`hidden lg:flex items-center gap-8 ${isRTL ? "flex-row-reverse" : ""}`}>
+          <div className={`hidden xl:flex items-center gap-5 ${isRTL ? "flex-row-reverse" : ""}`}>
             {navLinks.map((link) => (
               <Link
                 key={link.path}
@@ -75,7 +76,7 @@ export default function Navbar() {
           </div>
 
           <button
-            className="lg:hidden p-2 text-foreground"
+            className="xl:hidden p-2 text-foreground"
             onClick={() => setMobileOpen(!mobileOpen)}
           >
             {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -89,7 +90,7 @@ export default function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden bg-white/95 backdrop-blur-xl border-b border-border"
+            className="xl:hidden bg-white/95 backdrop-blur-xl border-b border-border"
           >
             <div className="px-6 py-6 space-y-4">
               {navLinks.map((link) => (
