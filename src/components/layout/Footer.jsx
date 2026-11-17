@@ -58,6 +58,7 @@ export default function Footer() {
             <div className="space-y-3">
               <Link to="/" className="block text-sm hover:text-primary transition-colors">{t.nav.home}</Link>
               <Link to="/about" className="block text-sm hover:text-primary transition-colors">{t.nav.about}</Link>
+              <Link to="/temoignages" className="block text-sm hover:text-primary transition-colors">{t.nav.testimonials}</Link>
               <Link to="/contact" className="block text-sm hover:text-primary transition-colors">{t.nav.contact}</Link>
             </div>
           </div>

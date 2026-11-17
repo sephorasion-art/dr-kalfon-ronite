@@ -11,6 +11,7 @@ import Luxopuncture from './pages/Luxopuncture';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Pricing from './pages/Pricing';
+import Testimonials from './pages/Testimonials';
 
 const PublicPages = () => {
   return (
@@ -22,6 +23,7 @@ const PublicPages = () => {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/pricing" element={<Pricing />} />
+        <Route path="/temoignages" element={<Testimonials />} />
       </Route>
       <Route path="*" element={<PageNotFound />} />
     </Routes>
