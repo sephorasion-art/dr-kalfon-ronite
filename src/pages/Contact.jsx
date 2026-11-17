@@ -51,7 +51,14 @@ export default function Contact() {
                 </div>
                 <div>
                   <h4 className="font-medium text-foreground text-sm">{t.contact.phone}</h4>
-                  <p className="text-sm text-muted-foreground">054-996-3354</p>
+                  <div className="space-y-1">
+                    <a href="tel:+33627062683" dir="ltr" className="block w-fit text-sm text-muted-foreground hover:text-primary transition-colors">
+                      +33 6 27 06 26 83
+                    </a>
+                    <a href="tel:+972549963354" dir="ltr" className="block w-fit text-sm text-muted-foreground hover:text-primary transition-colors">
+                      +972 54 996 3354
+                    </a>
+                  </div>
                 </div>
               </div>
               <div className="flex gap-4">
